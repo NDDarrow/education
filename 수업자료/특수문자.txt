@@ -1,0 +1,38 @@
+탐색기 열기: 윈도우+E
+화면 분할/전체화면: 윈도우 + 방향키
+프로그램 닫기: Alt +F4
+창 닫기: Ctrl + w
+저장하기: Ctrl + s
+
+
+특수문자의 이름과 뜻
+` 백틱
+! 느낌표(반대말)
+@   at ~에(위치)
+#    hash(쪼갠다)= 암호화 용도
+$    달러 돈
+%    percent 백분할
+^    hat
+&    ampersand= AND 중요
+*    asterisk= Everything
+()    소괄호
+{}    중괄호
+[]    대괄호
+-    dash
+_    underbar
+=    equare 대입하라  == 같냐?
++
+|    vertical-bar  OR 중요
+/   slash 나눗셈
+\   역슬래시 reversed slash
+"   큰따옴표 quotation mark
+'   작은따옴표
+:   Colon 속성과 값의 구분자
+;   Semi-colon 한 문자의 끝을 알리고 싶을때
+.   dot 
+,   comma 
+<   less than
+>   greater than
+
+
+
