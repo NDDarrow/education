@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>리스트 태그</title>
+</head>
+<body>
+  <!-- 이미지 태그 - img 태그에서 alt지정은 웹 표준이다(표준미준수 시 검색에서 배제될 수 있음)-->
+  <!-- image 이미지 생성, width 넓이(텍스트는 안됨), height 높이(둘 다 입력시 원본 해상도 손상 우려) -->
+  <!-- alt 이미지 경로 오류로 이미지 미생성시 보여지는 내용-->
+  <image src="image.jpg" width="300" height="300" alt="경로틀림">
+  
+  <!-- 리스트(목록) 태그-->
+  <ul>
+    <li>60년만에 다시 추진되는 서울 확장</li>
+    <li>구리시장 서울시 편입에 적극 동참</li>
+    <li>이준석.홍준표 징계취소</li>
+    <li>1주일만에 경찰 출석하는 이선균</li>
+  </ul>
+  <ul>
+    <li>아메리카노
+      <ul>
+        <li>아라비카</li>
+        <li>블루마운틴</li>
+        <li>로부스탄</li>
+      </ul>
+    </li>
+    <li>바닐라라떼</li>
+    <li>모카라떼</li>
+  </ul>
+
+  <h3>오늘 점심 추천 순위</h3>
+  <ol>
+    <li>돈가스(어제먹음)
+      <ul>
+        <li>카레</li>
+        <li>우동</li>
+        <li>돈가스</li>
+      </ul>
+    </li>
+    <li><em>김치찌개(근처에 파는 식당을 모름)</em></li>
+    <li><b>뼈해장국(가까이에 이가네있음)</b></li>
+    <li><strong>os하우스(그거먹고 될까?)</strong></li>
+    <li><s>된장찌개(돈주고 안사먹음)</s></li>
+  </ol>
+
+  
+  <dl> <!-- dl 정의형 리스트 dt 대상 dd 대상에 대한 정의 -->
+    <dt>점심</dt>
+      <dd>정오를 기준으로 먹는 식사</dd>
+      <dd><i>직장인들이 엄청 기다림</i></dd>
+    <dt>커피</dt>
+      <dd>커피콩을 볶아서 물로 희석해서 마시는 음료</dd>
+      <dd><mark>조선 전통 음료를 밀어내고 한국 최대의 디저트가 됨</mark></dd>
+  </dl>
+<!-- ul 순서를 표기해주지 않는 태그(한글문서 글머리표) li ul,ol안에 텍스트 표시를 위한 명령어-->
+<!--li*x= x개의 li태그, ul,ol 태그 밑에 li태그 x개= ul>li*x-->
+<!-- 태그*x= x개의 태그를 생성 태그*x>태그*y= x개의 태그 안에 y개의 태그 생성 -->
+<!-- ul안에 다시 ul을 만들고 사용할때 태그 닫기 주의-->
+<!-- ol 순서를 표기해주는 태그(한글문서 문단번호)-->
+<image src="가챠연출.gif" width="300" alt="쏴리맨">
+</body>
+</html>

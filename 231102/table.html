@@ -1,0 +1,65 @@
+<!-- table.html-->
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>테이블 태그</title>
+</head>
+<body>
+  
+  <table border="1">
+    <tr height="50">
+      <td width="100" bgcolor="red"></td>
+      <td width="100" bgcolor="red"></td>
+      <td width="100" bgcolor="white"></td>
+    </tr>
+    <tr height="50">
+      <td bgcolor="blue"></td>
+      <td bgcolor="blue"></td>
+      <td bgcolor="blue"></td>
+    </tr>
+    <tr height="50">
+      <td bgcolor="yellow"></td>
+      <td bgcolor="green"></td>
+      <td bgcolor="green"></td>
+    </tr>
+    <tr height="50">
+      <td bgcolor="yellow"></td>
+      <td bgcolor="white"></td>
+      <td bgcolor="white"></td>
+    </tr>
+  </table>
+
+  <!-- 
+  테이블에서 각 칸의 너비와 높이를 쉽게 지정하는방법
+  너비는 첫번째줄의 td들에게 주면 다른 줄에도 적용
+  높이는 모든줄의 첫번째 td에게 주면 뒤에 있는 칸에도 적용
+  높이는 tr 너비는 td
+  tr 줄 td 칸 bgcolor 배경색(이름도 가능, rgb 색상표에서 코드 복사하여 사용)
+  한 줄 배경색 설정은 tr에 추가 한 칸 배경색 설정은 td에 추가
+-->
+  <table border="1">
+    <tr>
+      <td width="200" height="75">1</td>
+      <td width="100" bgcolor="red"><em><b>2</b></em></td>
+      <td width="50" bgcolor="#FFD2FF">3</td>
+      <td width="100" bgcolor="">4</td>
+    </tr>
+    <tr bgcolor="#80F5FF">
+      <td height="75">5</td>
+      <td>6</td>
+      <td>7</td>
+      <td>8</td>
+    </tr>
+    <tr>
+      <td height="75">9</td>
+      <td>10</td>
+      <td>11</td>
+      <td>12</td>
+    </tr>
+<!--<image src="image.jpg" width="100" height="70"></image>-->   
+  </table>
+
+</body>
+</html>
