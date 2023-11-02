@@ -1,12 +1,88 @@
 <!-- table2.html-->
+<!--<link rel="shortcut icon" href="./아이콘2.ico" 웹페이지 아이콘 넣는법 -->
 <!DOCTYPE html>
 <html lang="ko">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>테이블과 css</title>
+  <link rel="shortcut icon" href="./아이콘2.ico"
+  <!-- css를 사용하려면 head태그안에 stlye 태그를 만들어서 내부에 작성해야함
+  css에서는 {}와 :을 사용-->
+  <!-- css에서 주석은 /**/로 사용-->
+  <style>
+    /* @import url('https://fonts.googleapis.com/css2?family=Gugi&display=swap');
+    
+    table{
+      border-collapse: collapse;
+    }
+    td{
+      border:1px solid black;
+      width: 100px;
+      height: 50px;
+      background-color: black;
+      color: white;
+      text-align: center; 글씨 위치변경
+      font-size: 25px;  글씨 크기변경
+      font-weight: 900;  글씨 굵기변경, bold 사용가능 
+      font-family: gugi;  글꼴 변경 내컴퓨터에 있는 글꼴 or 웹폰트 다운로드
+      vertical-align: center; 수직정렬
+    } 
+    ctrl/는 전체 주석 다시누르면 주석해제 */
+    /* .클래스명 -> .은 클래스를 의미 .을 붙여야 인식이가능(가장많이 사용하는 방식)*/
+    /*상위 태그에 설정을 주면 자식태그에 '상속됨'*/
+    .info{
+      font-size: 20px;
+      font-family: 돋움;
+    }
+    .info .job{
+      border: 3px solid yellow;
+    }
+    .name{
+      width:200px;
+      background-color: ivory;
+      height: 50px;
+      text-align: center;
+      color: seagreen;
+    }
+    .age{
+      border:2px dotted black;
+      font-size: 40px;
+    }
+    .job{
+      border:1px solid black;
+      width: 100px;
+      text-align:center;
+    }
+    .name:hover{
+      font-size: 30px;
+      color: aqua;
+      background-color: aquamarine;
+    }
+    /*hover= 마우스를 올렸을때 적용*/
+    /*stlye은 위에서 아래로 적용되는게 기본*/
+    /*하지만 상위의 태그를 이용해서 stlye을 주면 우선 적용(군대 명령체계)*/
+  </style>
+<!-- css에서는 bgcolor x background color로 써야함-->
+<!-- 웹폰트 사용법 웹폰트 @import 링크 복사 후 <stlye>태그 아래 링크복사-->
 </head>
+<!-- 테이블 지정하는 법
+1. 태그째로 묶어서 설정
+2. 태그에 class로 이름을 부여 후 이름으로 묶어서 설정-->
+
 <body>
-  
+
+  <table class="info">
+    <tr>
+      <td class="name">이순신</td>
+      <td class="age">34세</td>
+      <td class="job">군인</td>
+    </tr>
+    <tr>
+      <td class="name">정약용</td>
+      <td class="age">39세</td>
+      <td class="job">과학자</td>
+    </tr>
+  </table>
 </body>
 </html>
