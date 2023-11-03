@@ -54,6 +54,9 @@ body{
   cursor: pointer;
 }
 
+#iventWrap{
+  padding-left: 50px;
+}
 .slideImage {width: 500px;}
 
 .slideImage img {width: 100%;}
