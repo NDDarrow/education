@@ -1,0 +1,47 @@
+/*table3.css*/
+/*
+ class이름에 대한 표기법
+ 카멜표기법, 스네이크표기법 등등
+ 카멜케이스 - myPageInfo -낙타의 등처럼 단어가 시작되는 부분을 대문자로 적는 표기법
+ 웹에서 자주 사용, 수업중에 사용할 예정
+ 스네이크표기법- my_page_info- 뱀처럼 _를 사용하는 표기법
+ 파이썬, 데이터베이스에서 자주 사용
+ 파스칼표기법 - MyPageIfo- 카멜과 비슷하지만 첫번째부터 대문자(예전에 쓰던 파스칼언어에서 쓰던방식)
+ 헝가리안표기법 -class_numTd 어디서 사용되는지 명시하는 표기법
+ EX g_val. s_val, c_val
+
+*/
+.box{border-collapse: collapse;}
+.box tr th{
+  border-bottom: 3px solid #aaa;
+}
+
+.num{
+  width: 50px;
+  height: 40px;
+  border-top: 3px solid #aaa;
+}
+.name{
+  width: 150px;
+  }
+.score{
+  width: 50px;
+}
+.rank{
+  width: 40px;
+}
+.box tr td{
+  text-align: center;
+  height: 30px;
+  border-bottom: 1px solid #bbb;
+}
+.nameTd{
+  font-weight: 800;
+}
+.nameTd:hover{
+  background-color: coral;
+  color: #fff;
+}
+.rankTd{
+  color: red;
+}
