@@ -1,0 +1,16 @@
+body{margin: 0;}
+#box{
+  border-collapse: collapse;
+  width: 500px; height: 300px;
+}
+#main{height: 30px; border: 1px solid black;}
+#mainBox{width: 100%; text-align: right;}
+.mainTable{float: right; font-weight: 800}/*float 태그 자체를 정렬시킴(요즘 잘 안씀:플롯 태그는 상위태그에서의 제어가 어려움)*/
+#tag{height: 60px; border: 1px solid black;}
+#tag table{margin: 0 auto; font-weight: 800}
+/*margin:0 auto;는 margin: 위아래여백 왼오른쪽여백*/
+#schedule td{height: 210px; border: 1px solid black;}
+.scheduleBoxOne{width: 150px;}
+.scheduleBoxOne li{font-size: 9px; font-weight: 800}
+.scheduleBoxTwo{width: 350px;}
+
