@@ -1,0 +1,17 @@
+#out{
+    height: 250px; width: 800px;
+    background: yellow;
+    box-sizing: border-box;
+    padding-left: 600px;
+}
+#in{
+    height: 50px; width: 200px;
+    background: grey;
+    /* margin-left: 600px; */
+}
+#master{
+    width: 400px;
+    background: lightblue;
+    text-align: center;
+    padding: 50px 0px;
+}
