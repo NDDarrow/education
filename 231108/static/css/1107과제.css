@@ -1,0 +1,23 @@
+body{margin: 0;}
+#wrap{
+    width: 1000px;
+    margin: 0 auto;
+    position: relative;
+}
+#header{
+    width: 100%; padding: 20px;
+    position: sticky; top: 0;
+    background: white; z-index: 100;
+}
+#logoWrap{width: 62px; height: 81px;}
+.menuWrap{position: absolute;
+    left: 102px; top: 0;}
+.nav{position: relative; line-height: 101px;}
+.menu{position: absolute; width: 100px;}
+.nav .menu:nth-child(2){left: 100px;}
+.nav .menu:nth-child(3){left: 200px;}
+.nav .menu:nth-child(4){left: 300px;}
+.nav .menu:nth-child(5){left: 450px;}
+.nav .menu:hover{background-color: black; color: white;}
+#main{width: 100%; background: lightblue; opacity: 0.5;}
+.main{ height: 500px; width: 450px; background-color: red;}

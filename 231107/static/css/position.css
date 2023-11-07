@@ -1,0 +1,67 @@
+body{margin: 0;}
+#wrap{
+    width: 1000px;
+    margin: 0 auto;
+    position: relative;
+}
+#header{
+    width: 100%;
+    padding: 20px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background-color: white;
+}
+.logoWrap{height: 50px; width: 100px;}
+.menuWrap{
+    position: absolute;
+    left: 130px;
+    top: 0;
+}
+.nav{
+    position: relative;
+    line-height: 90px;}
+.menu{
+    width: 150px;
+    position: absolute;
+}
+#main{
+    width: 100%;
+    position: relative;
+}
+.imgBox{
+    position: relative;
+    width: 300px;
+    height: 200px;
+    margin-top: 15px;
+}
+#main .imgBox:nth-child(4){
+    top: -645px;
+    left: 315px;
+    height: 0;
+}
+#main .imgBox:nth-child(5){
+    top: -230px;
+    left: 315px;
+    height: 0;
+}
+#main .imgBox:nth-child(6){
+    top: -245px;
+    left: calc(315px*2);
+    height: 0;
+}
+#foot{
+    width: 100%; padding: 50px;
+    background-color: forestgreen;
+}
+
+.nav .menu:nth-child(2){left: 150px;}
+.nav .menu:nth-child(3){left: 300px;}
+.nav .menu:nth-child(4){left: 450px;}
+.nav .menu:nth-child(5){left: 600px;}
+/*
+동일한 태그명을 가진 하위 태그를 선택하는 방법
+.nva .menu:nth-child()
+nth-child() 가상선택자
+line-height:; 전체높이를 입력하면 높이 안에서 가운데에 위치함
+*/
