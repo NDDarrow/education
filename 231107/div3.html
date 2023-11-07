@@ -3,9 +3,78 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>div3</title>
+    <link rel="stylesheet" href="./static/css/div3.css">
+    <style>
+        #box1{
+            height: 500px; width: 500px; background: lightpink;
+            margin-top: 100px;
+            position: relative;
+        }
+        #child1{
+            height: 150px; width: 100px; background: green; opacity: 0.5;
+            position: absolute;
+            left: 150px; top: 30px;
+            
+        }
+        #child2{
+            height: 50px; width: 100px; background: brown; opacity: 0.5;
+            position: relative;
+            top: 100px;
+            right: 50px;
+        }
+        #topButton{
+            position: fixed;
+            right: 100px;
+            top: 200px;
+        }
+        #menu{
+            position: sticky;
+            top: 10px;
+            z-index: 100;/*레이어 순서 높을수록 앞에 위치*/
+        }
+    </style>
 </head>
 <body>
+    <!-- css - position 
+    position : 위치, 페이지에서 해당 태그를 배치하는 방법
+    position 값
+        -position:static; 기본적으로 태그가 가지고 있는값
+
+        -position:relative; 자신이 처음 생성된 위치를 기준으로  
+        top, right, left, bottom 방향으로 이동가능하다.
+        left, top은 왼쪽 상단이 기준
+        right, bottom은 오른쪽 하단이 기준
+        기준점에서 어디든 이동'은' 가능하다.
+        relative일때 기준점을 중심으로 이동이 되기때문에
+        right, bottom 사용시 주의 해야 한다.
+
+        -position:absolute; 상위태그(부모, 조상태그)를 기준으로 이동
+        position:absolute;사용시 무조건 상위태그에 position(static 제외)이 존재해야 함
+        모든 상위태그에 포지션이 없으면 body까지 감
+        다른 태그에 영향을 주지 않는다.
+
+        -position:fixed; absolute처럼 순서에서 제거되고
+        absolute와는 다르게 상위(부모,조상)태그에 귀속 되지 않는다.
+        browser에 귀속되며 browser위치에는 영향을 받는다.
+
+        -position:sticky; 태그의 기본 순서는 유지를 하면서
+        스크롤 동작시에는 가장 가까운 상위태그에 귀속된다.
+        sticky태그를 화면 전체에 표현하기 위해선 화면전체를 표현하는
+        태그에 귀속시켜야 한다.
+        스크롤이 sticky 태그에 위치해 있으면 일반적인 태그의
+        모습으로 나타나지만
+        스크롤이 sticky 태그위치와 달라지면 fixed처럼 화면에 고정된다.
+
+    -->
+    <div id="menu">돈까스 백반 짜장면 뼈다귀해장국</div>
+    <div id="box1">
+        <div id="child1"></div>
+        <div id="child2"></div>
+        <div id="topButton">top</div>
+        
+    </div>
     
+    <div style="height:800px;"
 </body>
 </html>

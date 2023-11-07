@@ -15,3 +15,12 @@
     text-align: center;
     padding: 50px 0px;
 }
+#animal{
+    background: forestgreen;
+    width: 1000px;
+    padding: 150px  0 30px 10px;
+    /* padding:상하 좌우;
+       padding:상하좌우;
+       padding:상 우 하 좌(시계방향) 
+    */
+}
