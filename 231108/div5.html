@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        #menuWrap{
+            width: 800px; margin: 0 auto; /*태그의 위치를 브라우저 가운데 표시하려면 
+                                            너비와 margin:0 auto;값을 부여하면 된다.*/
+            background: #222845; color: #eaeaea;
+        }
+        .menu{
+            display: inline-block;
+            padding: 15px 30px;
+            position: relative;
+        }
+        .menu:hover{
+            background: #eaeaea;
+            color: #222845;
+            cursor: pointer;
+        }
+        .sub{
+            display: none;
+            position: absolute;
+            top: 52.5px; left: 0;
+            background: lightblue;
+            width: 100%;
+            text-align: center;
+            line-height: 26.125px;
+        }
+        .menu:hover .sub{display: block;}
+        #main{ width: 1000px; margin: 0 auto;}
+        .image{
+            width: 400px; 
+            display: inline-block;
+            position: relative;
+            right: 0; top: 0;
+            transition-property: width, right, top;
+            transition-duration: 1s, 1s, 1s;
+        }
+        .image img{ width: 100%;}
+        .imgBox{text-align: center; height: 300px; margin-bottom: 100px;}
+        .imgBox:hover .image{
+            width: 200px;
+            right: 150px;
+            top: 75px;
+        }
+        .detail{ display: none; }
+        .imgBox:hover .detail{
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+    <main id="main">
+        <div class="imgBox">
+            <div class="image">
+                <img src="https://loremflickr.com/400/300/car?random=1" alt="자동차1">
+            </div>
+            <div class="detail">
+                차원이 다른 자동차<br>
+                주위에 사람들을 따라가지 못하는 속도<br>
+                언제터질지 모르는 도로 위의 시한폭탄
+            </div>
+        </div>
+        <div class="imgBox">
+            <div class="image">
+                <img src="https://loremflickr.com/400/300/car?random=2" alt="자동차2">
+            </div>
+            <div class="detail"></div>
+        </div>
+        <div class="imgBox">
+            <div class="image">
+                <img src="https://loremflickr.com/400/300/car?random=3" alt="자동차3">
+            </div>
+            <div class="detail"></div>
+        </div>
+        <div class="imgBox">
+            <div class="image">
+                <img src="https://loremflickr.com/400/300/car?random=4" alt="자동차4">
+            </div>
+            <div class="detail"></div>
+        </div>
+    </main>
+    <div id="menuWrap">
+        <div class="menu">HOME</div>
+        <div class="menu">
+            자동차
+            <div class="sub">
+                <div class="subMenu">시승신청</div>
+                <div class="subMenu">판매순위</div>
+            </div>
+        </div>
+        <div class="menu">
+            증권
+            <div class="sub">
+                <div class="submenu">주요주식</div>
+                <div class="submenu">국내주식</div>
+                <div class="submenu">해외주식</div>
+            </div>
+        </div>
+        <div class="menu">
+            영화
+        </div>
+        <div class="menu">
+            웹툰
+        </div>
+    </div>
+    
+</body>
+</html>
+<!-- 서버: 서비스를 제공하기 위한 운영체제가 설치된 컴퓨터
+         웹서비스를 제공하는 컴퓨터는 웹 서버라고 한다.
+         서버가 서비스를 제공하려면 주소와 port가 필요하다.
+     백엔드 - 자바, 서버컴퓨터에서 동작하는 프로그램
+     프론트엔드 - 클라이언트 컴퓨터에서 동작하는 프로그램 개발
+     우리가 쓰는 컴퓨터=클라이언트 컴퓨터
+-->

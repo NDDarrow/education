@@ -12,7 +12,7 @@ body{margin: 0;}
 #logoWrap{width: 62px; height: 81px;}
 .menuWrap{position: absolute; left: 102px; top: 0;}
 .nav{position: relative; line-height: 101px;}
-.menu{position: absolute; width: 100px;}
+.menu{position: absolute; width: 100px;text-align:center;}
 .nav .menu:nth-child(2){left: 100px;}
 .nav .menu:nth-child(3){left: 200px;}
 .nav .menu:nth-child(4){left: 300px;}
