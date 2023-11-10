@@ -1,0 +1,146 @@
+/* default.css */
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+#wrap{
+    width: 100%; 
+    background: #000;
+    color: #fff;
+    position: relative;
+    
+}
+#header{
+    width: 200px; height: 100vh;/*vh=viewport height,vw= viewport width*/
+    position: fixed;
+    top: 0; left: 0;
+    background: #272731;
+}
+#nav{
+    width: 100%;
+    padding: 20px 7px;
+}
+.title{
+    text-align: center;
+}
+
+.menuWrap{
+    width: 100%;
+    padding: 30px 0;
+}
+.menu{
+    display: block;
+    padding: 10px 0;
+    cursor: pointer;
+}
+.menuWrap .menu:nth-child(1){
+    text-align: center;
+    background: #000;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    position: relative;
+    overflow: hidden;
+    padding: 3px;
+}
+.menuWrap .menu:nth-child(1)::before{
+    content:"";
+    background: linear-gradient(90deg, red, orange, yellow, green, blue, darkblue, purple);
+    width: 100%; height: 100%;
+    position: absolute;
+    top: 0; left: 0;
+}
+.menuWrap .menu:first-child span{
+    z-index: 100;/*position이 static인 태그들은 z인덱스가 영향을 끼지지 않음*/
+    position: relative;
+    background: #000;
+    display: block;
+    height: 100%;
+    padding: 10px 0;
+    border-radius: 10px;
+}
+/*:before ,:after 특정태그의 앞 뒤에 추가로 요소를 넣을 수 있는 태그*/
+
+#main{
+    margin-left: 200px;
+    padding: 100px 80px;
+    position: relative;
+}
+
+.siteDetail{
+    width: 900px;
+    position: relative;
+    top: 0; left: 0;
+}
+
+.siteDetail h2{
+    width: 50%;
+    font-size: 30px;
+}
+.siteDetail h4{
+    width: 50%;
+    padding: 20px 0;
+    line-height: 30px;
+}
+.siteDetail img{
+    position: absolute;
+    top: 0; right: 0;
+    width: 400px;
+}
+.siteUse{
+    width: 900px;
+    position: relative;
+    top: 0; left: 0;
+}
+.button{
+    margin: 100px; padding-left: 50px;
+}
+.freeSign, .devTool{
+    display: inline-block;
+    cursor: pointer;
+    font-size: 20px;
+    padding: 10px 20px;
+}
+.freeSign{
+    background: forestgreen;
+    border-radius: 5px;
+}
+.freeSign:hover{
+    background: darkgreen;
+}
+.devTool{
+    background: lightpink;
+    border-radius: 5px;
+    margin-left: 15px;
+}
+.devTool:hover{
+    background: purple;
+}
+.card{
+    padding: 50px;
+    width: 900px;
+}
+.build, .learn{
+    display: inline-block;
+    width: 350px;
+    background:#272731 ;
+    padding: 20px;
+    border-radius: 10px;
+}
+.learn{
+    margin-left: 50px;
+}
+.build img, .learn img{
+    width: 100%;
+    border-radius: 10px;
+}
+.build h3, .learn h3{
+    font-size: 25px;
+    padding-bottom: 15px;
+}
+#footer{
+    margin-left: 200px;
+    background: #262627;
+    padding: 50px 100px;
+    line-height: 35px;
+}
