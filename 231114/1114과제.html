@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+    // 과제
+    //  컴퓨터가 육면체 주사위를 던졌다.
+    //  나도 육면체 주사위를 던졌다.
+    //  주사위 값이 크면 이기는 게임이다.
+    //  내가 승리 했는가 패배했는가 출력하세요.
+    //  단. 같은 숫자라면 비김!!
+
+    var com = parseInt((Math.random()*6)+1)
+    var user = parseInt((Math.random()*6)+1)
+
+    var result = (user > com) ? "승리" : "패배"
+    result = (user == com) ? "비김" : result
+    console.log(result)
+
+
+
+
+    </script>
+
+</head>
+<body>
+    
+</body>
+</html>

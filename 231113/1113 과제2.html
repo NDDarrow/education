@@ -5,20 +5,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script type="text/javascript">
-        var red = 15;
-        var blue = 35;
-        var white = 0;
-        document.write("red : " + red + " , blue : " + blue + "<br>");
-        var white = 20;
-        red = red + white
-        blue = blue - white
+        // var red = 15;
+        // var blue = 35;
+        // var white = 0;
+        // document.write("red : " + red + " , blue : " + blue + "<br>");
+        // var white = 20;
+        // red = red + white
+        // blue = blue - white
         
-        document.write("red : " + red + " , blue : " + blue);
+        // document.write("red : " + red + " , blue : " + blue);
 
 
         //화면출력 결과 -> red : 15 , blue : 35
                         //red : 35 , blue : 15
-
+                        
+        var red = 15;
+        var blue = 35;
+        var white = 0;
+        document.write("red : " + red + " , blue : " + blue + "<br>");
+        white = blue;
+        blue = red;
+        red = white;
+        document.write("red : " + red + " , blue : " + blue + "<br>");
 
 
     </script>
