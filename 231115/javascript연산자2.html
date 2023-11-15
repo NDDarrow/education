@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        //논리 연산자
+        //참(true), 거짓(false) 을 연산 하는 연산자
+        //and(&&), or(||), not(!)
+        
+        // 참 값을 1 거짓값을 0으로 생각
+        
+        // and(&&)연산자 = 곱하기로 생각
+        // 0이 하나라도 있으면 나오는 값은 0
+        // 1*1 =1 참 1*0 = 0 거짓 0*1= 0 거짓 0*0=0 거짓
+
+        // or(||) 연산자 = 더하기로 생각
+
+        //and와 or연산자는 반드시 좌우에 조건식이 존재해야 함
+
+        //and연산자는 여러개의 조건을 만들어야 되는 경우에 조건 사이사이에
+        //그리고를 넣어서 표현했을때 자연스러워야 한다.
+        
+        //or연산자는 여러개의 조건을 사용해서 만들어야 하는 경우에 조건 사이사이에
+        // 또는을 넣어서 표현했을때 자연스러워야 한다.
+
+    // var num1 = parseInt(prompt("첫번째 정수"))
+    // var num2 = parseInt(prompt("두번째 정수"))
+    // var num3 = parseInt(prompt("세번째 정수"))
+    // var result = (num1 > num2) ? num1 : num2;
+    // result = (result > num3) ? result : num3;
+    // result = (num == num2 && num1 == num3) ? "모두 같다" : result
+
+    //세개의 정수 중 큰수출력, 세개가 모두 같으면 같다 출력
+
+    // 야뱌위 만들기
+    // 종이컵이 세개가 있다. 세개의 종이컵 중 한군데에만 주사위가 들어있다.
+    // 주사위가 들어있는 종이컵을 맞추면 2배
+    // 주사위 위치도 맞추고 주사위 값도 맞추면 6배
+    // 주사위는 사면체이다
+
+    // var eye = parseInt((Math.random()*4)+1)
+    // var cup = parseInt((Math.random()*3)+1)
+    
+    // var select_eye = parseInt(prompt("주사위의 눈은?"));
+    // var select_cup = parseInt(prompt("몇번 컵?"))
+    // var bat = parseInt(prompt("얼마 걸래?"))
+
+    // var result = (cup == select_cup) ? bat*2 : 0;
+    // var result = (eye == select_eye) ? result*3 : result
+    // console.log(result)
+    
+    //가위 바위 보!
+    //1.가위 2.바위 3.보
+    // var com = parseInt((Math.random()*3)+1)
+    // var user = parseInt(prompt("1.가위 2.바위 3.보"))
+
+    // var result = ( com == user ) ? "비김" :
+    //              ( com ==1 && user == 2) || ( com == 2 && user == 3) || (com == 3 && user == 1) ?
+    //              "이김" : "패배";
+    // console.log(result)
+
+    // var cl = user - com;
+    // var result = (cl == 0) ? "비김" : (cl == 1 || cl == -2) ? "이김" : "패배"
+    // console.log(result)
+
+
+    // document.write("<div class=red></div>")
+    // 문자열 비교하기는 a==="사각형"
+    // 1. 사각형의 색상을 입력하세요(빨강, 노랑, 파랑)
+    // 2. 크기를 입력하세요 (1,2,3) 1- 100 100, 2- 200 200 3- 300 300
+
+    // var size = prompt("크기를 입력 1 or 2 or 3");
+    // var color = prompt("색상을 입력 빨강 or 노랑 or 파랑");
+    
+    // var className = (color ==="빨강" && size ==="1") ? "red fir" :
+    //     (color === "빨강" && size === "2") ? "red sec" :
+    //     (color === "빨강" && size === "3") ? "red thi" :
+    //     (color === "파랑" && size === "1") ? "blue fir" :
+    //     (color === "파랑" && size === "2") ? "blue sec" :
+    //     (color === "파랑" && size === "3") ? "blue thi" :
+    //     (color === "노랑" && size === "1") ? "yellow fir" :
+    //     (color === "노랑" && size === "2") ? "yellow sec" :
+    //     (color === "노랑" && size === "3") ? "yellow thi" : "";
+    
+    //     document.write(`<div class='${className}'></div>`);
+
+
+        // 조건연산자 - 조건식의 결과에 따른 동작을 간단하게 구현할 때 사용
+        // a != 0 ? 100 : 0 ;
+
+    // 조건문 if, switch
+
+    // if 문- 조건식의 참, 거짓에 따라 내용이 실행된다.
+    // if( 10>5 ){
+    //     var a = 10;
+    //     a = 10 +222;
+    //     document.write(a);
+    //     console.log(a);
+    //}
+
+    //놀이기구 탑승조건 키가 130 이상 
+
+    // var tall = 150;
+    // if( tall >= 130){
+    //     document.write("탑승가능"); 
+    //     console.log("탑승가능");
+    // }else{
+    //     document.write("탑승불가");
+    //     console.log("탑승불가");
+    // }
+
+    //  if(조건식){조건식이 참일 경우 내용}
+    // else{조건식이 거짓일 경우 내용}
+
+    //두개의 정수를 입력받아 가장 작은숫자만 출력
+
+    // var num1 = parseInt(prompt("첫번째 정수 입력"))
+    // var num2 = parseInt(prompt("두번째 정수 입력"))
+
+    // if(num1 > num2){
+    //     document.write(num2)
+    // }else{
+    //     document.write(num1)
+    // };
+
+    //prompt("다음 추가 등록을 하시겠습니까?(y/n)")
+    //y 입력시 - 추가등록을 시작합니다. 출력
+    //n 입력시 - 등록을 종료합니다. 출력
+    //대소문자 모두 인식하도록 만들기
+
+    var res = prompt("다음 추가 등록을 하시겠습니까?(y/n)")
+    if(res === "y"|| res === "Y" ){
+        document.write("추가등록을 시작합니다.")
+    }else if(res === "n" || res === "N"){
+        document.write("등록을 종료합니다.")
+        }
+    
+
+
+
+
+
+
+
+    </script>
+    <style>
+
+        /* .fir{width: 100px; height: 100px;}
+        .sec{width: 200px; height: 200px;}
+        .thi{width: 300px; height: 300px;}
+        .red{background: red;}
+        .blue{background: blue;}
+        .yellow{background: yellow;} */
+    </style>
+</head>
+<body>
+    
+</body>
+</html>

@@ -13,15 +13,62 @@
     //  내가 승리 했는가 패배했는가 출력하세요.
     //  단. 같은 숫자라면 비김!!
 
-    var com = parseInt((Math.random()*6)+1)
-    var user = parseInt((Math.random()*6)+1)
+    // var com = parseInt((Math.random()*6)+1)
+    // var user = parseInt((Math.random()*6)+1)
 
-    var result = (user > com) ? "승리" : "패배"
-    result = (user == com) ? "비김" : result
-    console.log(result)
+    // var result = (user > com) ? "승리" : "패배"
+    // result = (user == com) ? "비김" : result
+    // console.log(result)
 
 
+    //1. 소주 한잔을 마시면 수명이 2분 단축된다.
+    //   어떤 사람이 소주를 매일 같은 양으로 20년을 마셨다.
+    //   이사람이 하루에 몇잔의 소주를 마시는지 입력 받기
+    //   총 단축된 수명이 몇분인가?
+    //   총 단축된 수명이 몇시간인가? (정수만 출력)
+    //   총 단축된 수명이 몇일인가?(정수만 출력)
 
+    // var soju = parseInt(prompt(" 몇 잔?"))
+    // var min = parseInt(soju * 7304)
+    // var hour = parseInt(min / 60)
+    // var day = parseInt(hour / 24)
+    // console.log("줄어든 수명은 \n"  + min + "분 \n" + hour + "시간 \n" + day + "일" )
+
+    //2. 주사위 게임
+    // 컴퓨터와 나는 각자 주사위를 두개씩 던진다.
+    // 주사위의 합이 큰 쪽이 이긴다.
+    // 내가 이겼는지 졌는지 비겼는지 출력하기
+    //, 단 두개의 주사위 값이 1이 나오면 무조건 이긴다 
+
+    // var com1 = parseInt((Math.random()*6)+1)
+    // var com2 = parseInt((Math.random()*6)+1)
+    // var user1 = parseInt((Math.random()*6)+1)
+    // var user2 = parseInt((Math.random()*6)+1)
+
+    // var result = ((user1 + user2) > (com1 + com2)) ?  "승리" : ((user1 + user2) == 2) ? "승리" 
+    // : ((user1 + user2) == (com1 + com2)) ? "비김" : "패배"
+    // console.log("유저1 " + user1)
+    // console.log("유저2 " + user2)
+    // console.log("컴1 " + com1)
+    // console.log("컴2 " + com2)
+    // console.log(result)
+
+    // console.log(${com1, ${com2}})
+    //자바스크립트 변수 표현 ${변수}
+
+    //3. 주차비 정산 
+    // apple 주차장의 주차요금 표
+    // 기본 주차비 1000원  기본시간 30분 버림120
+
+    //( 30분 이내 주차시 1000원, 10분당 100원추가)
+    // 2시간 이상 주차시 기본요금 변경
+    // 기본요금 1500원
+    // 주차시간을 분단위로 입력하여 주차요금이 얼마인지 출력하시오
+
+    var time = parseInt(prompt("주차 시간 입력"));
+    var money = (time > 30) ? parseInt((time - 30)/10) : 0;
+    var result = (time < 120) ? (money*100) + 1000 : (money - 9)*100 + 1500;
+    console.log(`${time}분`, `${result}원`);
 
     </script>
 
