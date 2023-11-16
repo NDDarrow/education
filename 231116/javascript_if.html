@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script src="./static/js/if1.js"></script>
+    
+    <style>
+        #game{
+            display: flex;
+            column-gap: 50px;
+        }
+        #game div{width: 600px;}
+        #game div img{width: 100%;}
+        #game div:hover{background: lightblue; cursor: pointer;}
+    </style>
+</head>
+<body>
+    <!-- <h2>동전 앞면 뒷면을 맞추세요!!</h2>
+    <div style="display: flex;">
+        <div id="front" style="width: 300px;" onclick="">
+            <img style="width: 100%;" src="./static/iamges/coin_front.png" alt="동전 앞면">
+        </div>
+        <div id="back" style="width: 300px;">
+            <img style="width: 100%;" src="./static/iamges/coin_back.png" alt="동전 뒷면">
+        </div>
+    </div> -->
+    <!--위의 onclick과 같은 태그를 이벤트라고 함-->
+
+    <h1>가위 바위보를 이겨라!!</h1>
+    <div id="game">
+        <div id="scissors">
+            <img src="./static/iamges/scissors.png" alt="가위">
+        </div>
+        <div id="rock">
+            <img src="./static/iamges/rock.png" alt="바위">
+        </div>
+        <div id="paper">
+            <img src="./static/iamges/paper.png" alt="보">
+        </div>
+
+    </div>
+    
+
+
+
+</body>
+</html>
+<!--클릭 시 행동 넣는법 : 태그에 이벤트 삽입
+1. html 자체에 입력 
+2. js 파일에 입력
+-->
