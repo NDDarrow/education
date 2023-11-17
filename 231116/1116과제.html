@@ -32,6 +32,22 @@
         document.write(10000)
     }
 
+    //답안
+    var min = parseInt(prompt("주차시간"));
+    var cost = 1000;
+
+    if(time >= 480){
+        cost = 10000; time = 0;
+    }else if(time >=240){
+        cost = 2500; time = time -240;
+    }else if(time >= 120){
+        cost = 1500; time = time - 120;
+    }else{
+        time = time < 30 ? 0 : time - 30;
+    }
+
+    var price = Math.floor(time / 10) * 100 + cost;
+    document.write(price + "원")
 
     </script>
 </head>
