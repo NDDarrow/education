@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        
+        //반복문 - 특정 코드들을 주어진 조건 동안 반복적으로 실행 시킨다.
+        //  반복문에도 조건식을 작성한다.
+        //  조건식이 참일 경우에는 반복 실행할 코드들이 동작하고 거짓이되면 종료된다.
+        //  반복문을 작성할 때 몇번을 반복해야 하는지 잘 생각하고 조건을 완성해야 한다.
+        // 5번 반복 - 시작 ~ 끝 , 1부터 5까지 , a = 1; a <= 5; a++
+
+        // for( 초기값; 조건식; 증감식){반복 시행될 구문}
+        
+        /*
+        for(var i = 1; i <= 10; i++){
+            document.write("for문" + i + "<br>")
+        }
+
+        for(var i = 1; i <= 9; i++){
+            document.write(`2 * ${i} =  ${2 * i}<br>`);
+        }
+
+        var num = parseInt(prompt("구구단 단수 입력"));
+        for(var i = 1; i <=9; i++){
+            document.write(`${num} * ${i} = ${num * i}<br>`);
+        }
+
+        */
+
+        // for문 작동구조
+        // 초기값 작동 -> 조건식 작동 - > 참 일경우 반복문 실행 ->증감식 실행
+        // ->조건식으로 이동 -> 반복 ... -> 조건식으로 이동 -> 거짓일 경우 종료
+
+        //정수 하나를 입력 받아서, 입력한 정수 만큼 반복 되는 반복문 작성
+        //내용은 반복문에 사용된 변수의 값 출력
+
+        /*
+        var num1 = parseInt(prompt("정수 입력"))
+        for(var i = 0; i <= num1; i++){
+            document.write(i + "명의 아해가 도로를 질주한다.<br>")
+        }
+        for(var i = num1; i >= 0; i--){
+            document.write(i + "명의 아해가 도로를 질주한다.<br>")
+        }
+
+        for(var i = 1; i <= 100; i++){
+            if(i % 5 == 0)
+            document.write(i +"<br>")
+        }
+        */
+
+        //1부터 100까지 숫자 중에서 4의 배수이며 6의 배수인 4,6 공배수 출력
+
+        /*
+        for(var i = 1; i <= 100; i++){
+            if(i %4 == 0 && i % 6 == 0)
+            document.write(i + "<br>")
+        }
+
+        var sum = 0;
+        for( var i = 1; i <= 10; ){
+            sum = sum + i;
+        }
+        document.write(sum);
+        */
+
+        /*
+        // 동전 앞면 뒷면
+        var win = 0;
+        for(var i = 1; i <= 10; i++){
+            var coin = Math.floor(Math.random()*2)+1;
+            var user = prompt("동전 앞, 뒤 면 입력(앞,뒤)");
+            if( (coin == 1 && user === "앞" || coin == 2 && user === "뒤")){
+                document.write(`승 동전:${coin} , 나:${user}<br>`);
+                win++;
+            }else{document.write(`패 동전:${coin} , 나:${user}<br>`)};
+        }
+        document.write(win)
+        */
+
+        //가위바위보 10판 승 패 무 출력
+        
+        // 1가위 2바위 3보
+        
+        /*
+        var win = 0; var loss = 0; var draw = 0;
+        for(var i = 1; i <= 10; i++){
+            var com = Math.floor(Math.random()*3)+1;
+            var user = prompt("가위바위보 입력");
+            if(com == 1 && user === "바위" || com == 2 && user === "보" || com == 3 && user === "가위"){
+                document.write(`승 컴 : ${com}, 유저:${user}<br>`);
+                win++;
+            }else if(com == 1 && user === "보" || com == 2 && user === "가위" || com == 3 && user === "바위"){
+                document.write(`패 컴 : ${com}, 유저:${user}<br>`);
+                loss++;
+            }else{
+                document.write(`무 컴 : ${com}, 유저:${user}<br>`);
+                draw++;
+            }
+        }
+        document.write(win + "," + loss + "," + draw + ",")
+        */
+
+        /*
+        var num = parseInt(prompt("몇개"));
+        for(var i = 1; i <= num; i++){
+            var img = `<div><img src="https://loremflickr.com/200/200?random=${i}" alt="이미지"></div>`
+            document.write(img);
+        }
+
+        for( var i = 1; i <= 4; i++){
+            for( var k = 1; k <= 3; k++){
+                document.write((k + i) + "중첩")
+            }
+            document.write("<br>")
+        }
+
+        //구구단 전체 출력
+
+        for( var i = 2; i <= 9; i++){
+            for( var j = 1; j <= 9; j++){
+                document.write(`${i} * ${j} = ${i*j}<br>`)
+            }
+        }
+        */
+
+        //반복문이 필요한 상황에서 한번만 실행되는 코드는 반복문 없이 작성한다.
+        //작성도니 코드에 반복문을 감싸준다.
+        //반복적으로 실행될 코드는 그대로두고 반복적으로 실행되면 안되는 코드들을 선별하여 밖으로 이동시킨다.
+
+        /*
+        var row = parseInt(prompt("줄"))
+        var col = parseInt(prompt("칸"))
+
+        var table ="<table>";
+        for(var i = 1; i <= row; i++){
+            table += "<tr>";
+            for(var j = 1; j <= col; j++){
+                var num = (j + (col * (i - 1)))
+                if(j % 2 == 1){
+                    table += "<td style='background:red;'>" +num + "</td>";
+                }else{
+                    table += "<td>" +num + "</td>";
+                }
+                
+            }
+            table += "</tr>"
+        }
+        table += "</table>" // table = table + "</table>"
+        document.write(table);
+        */
+
+
+        // 반복문의 무한 반복 - 몇번 반복해야 하는지 정해지지 않은경우
+        // 정수를 입력하기 -> 그만 입력하기 위해 0을 입력한다.
+        // 동전 앞면 뒷면 맞추기 게임을 하는데 정답 맞출때까지 게임을 계속하도록 한다면
+        // 언제 정답을 맞추게 될 지 알 수 없기 때문에 무한 반복이 필요하다.
+
+
+        /*
+        for( ; true ; ){
+            var coin = Math.floor(Math.random() * 2 ) + 1;
+            var user = parseInt(prompt("1.앞 2.뒤 입력"));
+            if(coin === user){
+                break;
+            }
+            document.write("패")
+        }
+        */
+        
+        /*
+        for( ; true ; ){
+            var num = Math.floor(Math.random()*100 ) + 1;
+            document.write(num + "<br>");
+            if(num % 7 == 0) break;
+        }
+        */
+        
+        //무한 루프, 나이 입력
+        // 내가 입력한 나이를 토대로 출생년도를 구하고
+        // 랜덤범위 (1950 ~ 2003), 랜덤값 중에서 내 출생년도가 나오기 까지 몇번의 반복문이 동작 했는지 출력하시오
+        
+        /*
+        var age = 0;
+        for(; age<20 || age > 73;){
+            var age = parseInt(prompt("나이 입력"))
+        }
+        var birth = 2023 - age
+        var sum = 0;
+        for( ; true ; ){
+            var year = Math.floor(Math.random() * 54 ) + 1950;
+            sum++
+            if( year ==  birth) break;
+        }
+        document.write(sum)
+        */
+
+        /*
+        var com = Math.floor(Math.random() * 50) + 1;
+        for( ; true ; ){
+            var user = parseInt(prompt("업 다운 게임"));
+            if( user > com ){
+                alert("다운")
+            }
+            if( user < com ){
+                alert("업")
+            }
+            if( user == com ){
+                alert("정답")
+                break;
+            }
+        }
+        */
+        
+        //오늘 과제 이거 반대 내가 내고 컴이 맞추게 만들기
+        // 제대로 만들면 8번 이내로는 맞춤
+        // 업은 최소값(매스랜덤에서 더하기 부분)으로 다운은 최대값(매스랜덤에서 곱하기 부분)으로 가야됨
+
+        var word = "international prototype"
+        var alp = "o"
+        var sum = 0
+        for( var i = 0; i < word.length; i++ ){
+            if(word.charAt(i) === alp ) sum++
+        }
+        document.write(sum)
+
+        for( var i = 1; i <= 100; i++){
+            if( i % 3 == 0){
+                document.write("<div>pizzle");
+                if( i % 10 == 0){
+                document.write(" buzzle</div>")
+                }else{
+                    document.write("</div>")
+                }
+            }else if( i % 10 == 0){
+                document.write("<div>buzzle</div>");
+            }else{
+                document.write(i+" ");
+            }
+        }
+
+
+
+
+
+
+    </script>
+    <style>
+        table{
+            border-collapse: collapse;
+        }
+        table tr td{
+            border: 1px solid black;
+            width: 100px; height: 50px;
+
+        }
+    </style>
+
+</head>
+<body>
+    
+    <table>
+
+    </table>
+
+
+
+</body>
+</html>
