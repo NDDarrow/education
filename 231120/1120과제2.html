@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var user = parseInt(prompt("업 다운 게임"));
+        var down = 50
+        var up =  0
+        for( ; true ; ){
+            var com = parseInt((down + up) / 2)
+            if( user < com ){
+                alert("다운")
+                down = com
+            }else if(user > com){
+                alert("업")
+                up = com
+                
+            }else if(com == user){
+                alert("정답")
+                break;
+            }
+            document.write(com + '<br>')
+        }
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
