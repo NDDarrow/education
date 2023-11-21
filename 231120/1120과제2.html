@@ -11,14 +11,14 @@
         for( ; true ; ){
             var com = parseInt((down + up) / 2)
             if( user < com ){
-                alert("다운")
-                down = com
+                alert(`다운  ${user}  ${com}`);
+                down = com;
             }else if(user > com){
-                alert("업")
-                up = com
+                alert(`업  ${user}  ${com}`);
+                up = com;
                 
             }else if(com == user){
-                alert("정답")
+                alert("정답");
                 break;
             }
             document.write(com + '<br>')
