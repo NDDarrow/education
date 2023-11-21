@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <script>
+        /*
+        인구조사
+        가족구성원의 나이를 prompt로 입력
+        0을 입력하면 입력처리 끝
+
+        입력이 끝나면 결과 출력
+        65세 이상 노인
+        20~ 64 성인
+        8~ 19 청소년
+        아동 1~ 7세
+        총원 10명
+        */
+
+        var count = 0, old = 0, adult = 0, youth = 0, child = 0;
+        for(;true;){
+            var age = parseInt(prompt("나이 입력 0 종료"))
+            
+            if(age >= 65){
+                old++;
+                count++;
+            }
+            if(age >= 20 && age < 65){
+                adult++;
+                count++;
+            }
+            if(age >= 8 && age <20){
+                youth++;
+                count++;
+            }
+            if(age >=1 && age < 8){
+                child++;
+                count++;
+            }
+            if(age == 0){
+                document.write(`총원 ${count}명 노인 ${old}명 성인 ${adult}명 청소년 ${youth}명 아동 ${child}명`);
+                break;
+        }
+    }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

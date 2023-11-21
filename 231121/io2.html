@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <script>
+    //숫자 맟주기
+    //숫자 2개입력
+    //입력한 숫자를 랜덤으로 일치하는 숫자 찾기
+
+    /*
+    function find(){
+        var num1 = Number($("#num1").val());
+        var num2 = Number($("#num2").val());
+        var num3 = Number($("#num3").val());
+        var count = 0;
+        while(true){
+            var ok = 0; //숫자 하나씩 일치 할때마다 값 증가, 3이되면 3개 숫자 모두 일치
+            var a = Math.floor(Math.random() * 45) + 1;
+            var b = Math.floor(Math.random() * 45) + 1;
+            var c = Math.floor(Math.random() * 45) + 1;
+            if(num1 == a || num1 == b || num1 ==c) ok++
+            if(num2 == a || num2 == b || num2 ==c) ok++
+            if(num3 == a || num3 == b || num3 ==c) ok++
+            count++; // 세개의 숫자에 대해 일치여부를 검사했으니 카운팅 1씩 증가
+            if(ok == 3){
+                $("#result").html(`세개 숫자 일치까지 <b>${count}<b>번 동작`)
+                break;
+            }
+        }
+    }
+    */
+
+/*
+    팀전 김민수, 노재홍, 이다희
+    2문제 택1
+    문제 1. 비밀번호 찾기
+    비밀번호 4개 숫자를 다음 조건에 맞게 찾으세요
+    1. 숫자 1~9 중복 없음
+    2. num1 = num4 +2
+    3. num2 < num3
+    4. num 1234 + num 4567 = 16896
+    문제 2. 숫자야구
+    랜덤값으로 3개의 숫자 뽑아내기(중복없음)
+    랜덤 숫자 3개 맞출때까지 계속 3개의 숫자 입력 하기
+
+*/
+
+
+
+// ((num1 * 1000) + (num2 * 100) + (num3 * 10) + num4) + (num4 * 1000) +(num3 * 100) +(num2 * 10) + num1
+// ((num4 + num1) * 1001) + ((num2 + num3) * 110) == 16896
+
+
+
+
+// var num1 = Math.floor(Math.random()*9)+1
+// var num2 = Math.floor(Math.random()*9)+1
+// var num3 = Math.floor(Math.random()*9)+1
+// var num4 = Math.floor(Math.random()*9)+1
+// var x = 16896
+// var y = ((num4 + num1) * 1001) + ((num2 + num3) * 110)
+
+// for(;true;){
+//     var count = 0;
+//     if(y != x){
+//         if(num1 != (num4 + 2)){
+//             if(num1 < num4 + 2){
+//                 num1++;
+//                 count++;
+//             }else{
+//                 num4--;
+//                 count++;
+//             }
+//         }
+//         if(num2 >= num3){
+//             num2--;
+//             count++;
+//         }
+//     }else{
+//         document.write(`정답 ${num1} ${num2} ${num3} ${num4} 횟수는 ${count}`)
+//         break;
+//     }
+// }
+
+    for(var a = 1; a <= 9; a++){
+        for(var b = 1; b <= 9; b++){
+            for(var c = 1; c <= 9; c++){
+                for(var d = 1; d <= 9; d++){
+                    if( a != b && a != c && b != c && b != d && c != d){
+                        if( a == d+2){
+                            if( b < c){
+                                var num = a*1000+b*100+c*10+d;
+                                var temp = d*1000+c*100+b*10+a;
+                                if(num + temp == 16896){
+                                    alert(num);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+
+
+</script>
+<style>
+    input{ width: 50px;}
+</style>
+</head>
+<body>
+    <input type="text" id="num1">
+    <input type="text" id="num2">
+    <input type="text" id="num3">
+    <button onclick="find()">실행</button>
+    <div id="result"></div>
+</body>
+</html>
