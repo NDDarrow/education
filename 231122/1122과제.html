@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <script>
+        //과제
+        //한화이글스 투수들의 평균 자책점
+        // name=["주현상","윤대경","이민우","이태양","페냐","박상원","김범수"]
+        // era = [1.96, 2.45, 2.63, 3.23 , 3.60, 3.65] 평균자책점
+        // 
+
+        let name = ["주현상","윤대경","이민우","이태양","페냐","박상원","장시환"]
+        let era = [1.96, 2.45, 2.63, 3.23 , 3.60, 3.65, 3.38]
+        let ace = new Array();
+        let aceEra = new Array();
+        let total = 0;
+        for(var i = 0; i < name.length; i++){
+            total += era[i]
+        }
+        let avr = total / era.length
+        for( var i = 0; i < name.length; i++){
+            if( era[i] < avr){
+                ace.push(" " + name[i]);
+                aceEra.push(" " + era[i]);
+            }
+        }
+        document.write(avr + "<br>")
+        document.write(ace + " " + "<br>" + aceEra)
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
