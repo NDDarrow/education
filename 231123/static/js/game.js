@@ -23,5 +23,5 @@ $(function(){
 
 });
 function endgame({
-    d
+    
 })
