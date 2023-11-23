@@ -22,13 +22,12 @@
         }
         let avr = total / era.length
         for( var i = 0; i < name.length; i++){
-            if( era[i] < avr){
+            if( era[i] > avr){
                 ace.push(" " + name[i]);
                 aceEra.push(" " + era[i]);
             }
         }
-        document.write(avr + "<br>")
-        document.write(ace + " " + "<br>" + aceEra)
+        document.write("평균 : " + avr + "<br>" + "미달 : " + ace + " " + "<br> 평균자책점 : "  + aceEra)
 
 
     </script>
