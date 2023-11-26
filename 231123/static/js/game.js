@@ -1,5 +1,5 @@
 let board = new Array();
-
+let score = new Array();
 //중복없이 25개 숫자 저장하기
 for( var i = 1; i <= 25; i++){
     var tmp = Math.floor(Math.random() * 100) + 1;
@@ -7,7 +7,9 @@ for( var i = 1; i <= 25; i++){
         board.push(tmp);
     }else i--;
 }
-
+function save(){
+    
+};
 $(function(){
     $.each( board , function(i,v){ // i-인덱스, v- 배열값
         $(".numBox").eq(i).text(v);
@@ -17,11 +19,42 @@ $(function(){
         $(this).css("background","black")
         $(this).css("color","white")
         var idx = $(".numBox").index(this)
+        score.push(board.indexOf(board[idx]))
+        score.sort
         board[idx] = 0;
         endgame();
     })
 
 });
-function endgame({
-    
-})
+function endgame(){
+    let line = 0;
+    if(score.indexOf([0,1,2,3,4]) == 1) line++ 
+    if(score.indexOf([5,6,7,8,9]) == 1) line++ 
+    if(score.indexOf([10,11,12,13,14]) == 1) line++ 
+    if(score.indexOf([15,16,17,18,19]) == 1) line++ 
+    if(score.indexOf([20,21,22,23,24]) == 1) line++ 
+    if(score.indexOf([0,5,10,15,20]) == 1) line++ 
+    if(score.indexOf([1,6,11,16,21]) == 1) line++ 
+    if(score.indexOf([2,7,12,17,22]) == 1) line++ 
+    if(score.indexOf([3,8,13,18,23]) == 1) line++ 
+    if(score.indexOf([4,9,14,19,24]) == 1) line++ 
+    if(score.indexOf([0,6,12,18,24]) == 1) line++ 
+    if(score.indexOf([4,8,12,16,20]) == 1) line++
+    if(line == 5){
+        document.write("승리하셨습니다")
+    }
+}
+
+
+//누른숫자를 저장하는 배열을 만들어야 한다. 클리어
+//[0,1,2,3,4] [5,6,7,8,9] [10,11,12,13,14] [15,16,17,18,19] ,[20,21,22,23,24] 가로
+//[0,5,10,15,20][1,6,11,16,21][2,7,12,17,22][3,8,13,18,23][4,9,14,19,24]
+//[0,6,12,18,24] [4,8,12,16,20]
+
+
+//엔드게임을 돌리면 배열을 검출한다
+//검출된 배열의 종류가 5개 넘으면 게임을 종료한다.
+//그럼 엔드게임 안에는 반복문을 써서 검출해야 되는가?
+//온클릭에서 자동으로 반복이 되니까
+//엔드게임에는 반복기능이 필요가 없다.
+
