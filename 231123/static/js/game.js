@@ -20,7 +20,6 @@ $(function(){
         $(this).css("color","white")
         var idx = $(".numBox").index(this)
         score.push(board.indexOf(board[idx]))
-        score.sort
         board[idx] = 0;
         endgame();
     })
@@ -28,23 +27,116 @@ $(function(){
 });
 function endgame(){
     let line = 0;
-    if(score.indexOf([0,1,2,3,4]) == 1) line++ 
-    if(score.indexOf([5,6,7,8,9]) == 1) line++ 
-    if(score.indexOf([10,11,12,13,14]) == 1) line++ 
-    if(score.indexOf([15,16,17,18,19]) == 1) line++ 
-    if(score.indexOf([20,21,22,23,24]) == 1) line++ 
-    if(score.indexOf([0,5,10,15,20]) == 1) line++ 
-    if(score.indexOf([1,6,11,16,21]) == 1) line++ 
-    if(score.indexOf([2,7,12,17,22]) == 1) line++ 
-    if(score.indexOf([3,8,13,18,23]) == 1) line++ 
-    if(score.indexOf([4,9,14,19,24]) == 1) line++ 
-    if(score.indexOf([0,6,12,18,24]) == 1) line++ 
-    if(score.indexOf([4,8,12,16,20]) == 1) line++
-    if(line == 5){
-        document.write("승리하셨습니다")
+    if(score.length >= 1){
+        var count = 0;
+        if(score.includes(0) === true) count++
+        if(score.includes(1) === true) count++
+        if(score.includes(2) === true) count++
+        if(score.includes(3) === true) count++
+        if(score.includes(4) === true) count++
+        if(count == 5) line++
     }
+    if(score.length >= 1){
+        var count = 0;
+        if(score.includes(5) === true) count++
+        if(score.includes(6) === true) count++
+        if(score.includes(7) === true) count++
+        if(score.includes(8) === true) count++
+        if(score.includes(9) === true) count++
+        if(count == 5) line++
+    }
+    if(score.length >= 1){
+        var count = 0;
+        if(score.includes(10) === true) count++
+        if(score.includes(11) === true) count++
+        if(score.includes(12) === true) count++
+        if(score.includes(13) === true) count++
+        if(score.includes(14) === true) count++
+        if(count == 5) line++
+    }
+    if(score.length >= 1){
+        var count = 0;
+        if(score.includes(15) === true) count++
+        if(score.includes(16) === true) count++
+        if(score.includes(17) === true) count++
+        if(score.includes(18) === true) count++
+        if(score.includes(19) === true) count++
+        if(count == 5) line++
+    }
+    if(score.length >= 1){
+        var count = 0;
+        if(score.includes(20) === true) count++
+        if(score.includes(21) === true) count++
+        if(score.includes(22) === true) count++
+        if(score.includes(23) === true) count++
+        if(score.includes(24) === true) count++
+        if(count == 5) line++
+    }
+    if(score.length >= 1){
+        var count = 0;
+        if(score.includes(0) === true) count++
+        if(score.includes(5) === true) count++
+        if(score.includes(10) === true) count++
+        if(score.includes(15) === true) count++
+        if(score.includes(20) === true) count++
+        if(count == 5) line++
+    }
+    if(score.length >= 1){
+        var count = 0;
+        if(score.includes(1) === true) count++
+        if(score.includes(6) === true) count++
+        if(score.includes(11) === true) count++
+        if(score.includes(16) === true) count++
+        if(score.includes(21) === true) count++
+        if(count == 5) line++
+    }
+    if(score.length >= 1){
+        var count = 0;
+        if(score.includes(2) === true) count++
+        if(score.includes(7) === true) count++
+        if(score.includes(12) === true) count++
+        if(score.includes(17) === true) count++
+        if(score.includes(22) === true) count++
+        if(count == 5) line++
+    }
+    if(score.length >= 1){
+        var count = 0;
+        if(score.includes(3) === true) count++
+        if(score.includes(8) === true) count++
+        if(score.includes(13) === true) count++
+        if(score.includes(18) === true) count++
+        if(score.includes(23) === true) count++
+        if(count == 5) line++
+    }
+    if(score.length >= 1){
+        var count = 0;
+        if(score.includes(4) === true) count++
+        if(score.includes(9) === true) count++
+        if(score.includes(14) === true) count++
+        if(score.includes(19) === true) count++
+        if(score.includes(22) === true) count++
+        if(count == 5) line++
+    }
+    if(score.length >= 1){
+        var count = 0;
+        if(score.includes(0) === true) count++
+        if(score.includes(6) === true) count++
+        if(score.includes(12) === true) count++
+        if(score.includes(18) === true) count++
+        if(score.includes(24) === true) count++
+        if(count == 5) line++
+    }
+    if(score.length >= 1){
+        var count = 0;
+        if(score.includes(4) === true) count++
+        if(score.includes(8) === true) count++
+        if(score.includes(12) === true) count++
+        if(score.includes(16) === true) count++
+        if(score.includes(20) === true) count++
+        if(count == 5) line++
+    }
+    console.log(line)
 }
-
 
 //누른숫자를 저장하는 배열을 만들어야 한다. 클리어
 //[0,1,2,3,4] [5,6,7,8,9] [10,11,12,13,14] [15,16,17,18,19] ,[20,21,22,23,24] 가로

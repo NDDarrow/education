@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+</head>
+<body>
+<!-- form 데이터 전송을 위한 태그 -->
+<!-- form 속성 - 
+        명칭관련 속성 - id, class, name
+        method - 전송하는 방법
+                get : 데이터를 있는 그대로 서버에 전달(데이터 노출)
+                post : 데이터를 변환 하여 서버에 전달(압축, 암호화)
+                get은 속도가 빠르지만 외부 접촉 가능성이 높고
+                post는 속도는 느리지만 get보단 안정성이 높음
+        action - 데이터 전송 위치 지정
+        enctype - 데이터 형식 지정(이미지, 동영상, 음악 등등)
+                : multipart/form-data
+
+        데이터가 입력, 선택된 태그에 반드시 name이 존재해야 데이터 전송가능
+-->
+    <form method="get" action="login_check.jsp"><!--form 은 기본적으로 display block상태-->
+        <input type="text" name="text1" placeholder="아이디"> <br>
+        <input type="password" name="pass" placeholder="비번"> <br>
+        <input type="number" name="age" min="0" max="150" placeholder="숫자"> <br>
+        <input type="color" name="mycolor"><br>
+        <input type="date" name="today" min="2023-01-01" max="2023-12-31"><br>
+        <input type="month" name="todayMonth"><br>
+        <input type="datetime" name="todayTime"><br>
+        <input type="datetime-local" name="todayTime2"><br>
+        <input type="email" name="email" required><br>
+        <input type="image" name="myimg" src="https://loremflickr.com/100/100"><br>
+        <input type="button" value="가입">
+        <input type="submit" value="가입">
+        <input type="reset" value="작성취소">
+        <input type="time" name="time"><br>
+        <input type="week" name="week"><br>
+        <input type="tel" name="mytel" pattern="[0-9]{3}-[0-9]{4}-[0-9]{4}"><br>
+        <input type="url" name="nowurl"><br>
+        <input type="range" name="width" min="100" max="200" step="10"><br>
+        <input type="checkbox" name="interest" value="축구">축구
+        <input type="checkbox" name="interest" value="게임">게임        
+        <input type="checkbox" name="interest" value="영화">영화<br>
+        <input type="radio" name="gender" value="남">남자
+        <input type="radio" name="gender" value="여">여자<br>
+        <input type="file" name="youimg"><br>
+        <input type="hidden" name="ids" value="1">
+
+        <textarea name="memo"></textarea>
+        <select name="game">
+            <option value="lol">리그오브레전드</option>
+            <option value="gta">gta</option>
+            <option value="fifa">피파온라인</option>
+        </select><br>
+
+        <input type="list">
+        <datalist id="lang" name="language">
+            <option value="html">html</option>
+            <option value="css">css</option>
+            <option value="java">java</option>
+        </datalist>
+
+        <!--checkbox는 여러데이터를 그룹화하여 사용하는 input태그이다.
+            반드시 그룹으로 묶어 주기위해서는 name이 같아야한다.-->
+        </form>
+
+        <form oninput="res.value = parseInt(a.value)+ parseInt(b.value)">
+            <input type="number" name="a" id="a">+
+            <input type="number" name="b" id="b">=
+            <output name="res" for="a b"></output>
+        </form>
+    <!--
+        월 - html form - style,js로 값 가져오는방법
+        화 - css animation
+        수 - mediaquery, grid
+        목 - js- fucntion
+        금 - js- fucntion
+    -->
+</body>
+</html>
