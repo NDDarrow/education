@@ -25,6 +25,7 @@
     width: 200px;/* width: calc(100% - 145px); */
     padding-left: 7px 10px;
     font-size: 30px;
+    padding: 5px 10px;
 }
 /* email input 태그만 선택
     #myem   .input_field:nth-child(4) input

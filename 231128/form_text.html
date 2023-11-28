@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <script>
+        $(function(){
+            $("#allchk").on("click",function(){
+                let check = $(this).is(":checked");
+                if(check){
+                    $(".agree").prop('checked',true);
+                }else{
+                    $(".agree").prop('checked',false);
+                }
+            });
+            $(".listBox").on("click",function(){
+                let agreeCheck = $(".agree:checked").length
+                let listCheck = $(".agree").length
+                if( agreeCheck == listCheck){
+                    $("#allchk").prop("checked",true)
+                }else{$("#allchk").prop("checked",false)}
+            });
+            $("#pass").on("click",function(){
+                if($(".agree:checked").length != 4){
+                    alert("모두 체크하시오")
+                }
+            });
+        });
+    </script>
+    <style>
+        .checkWrap{
+            width: 300px;
+        }
+        .listBox{
+            padding-left: 50px;
+            display: flex;
+            flex-direction: column;
+        }
+        #pass{
+            width: 180px;
+        }
+    </style>
+</head>
+<body>
+    
+    <form method="get" action="pass.html">
+        <div class="checkWrap">
+            <div class="allBox">
+                <span class="allchk"><input type="checkbox" name="allchk" id="allchk">모두 동의</span>
+            </div>
+            <div class="listBox">
+                <span><input type="checkbox" name="agr" class="agree" value="개인정보">개인정보활용</span>
+                <span><input type="checkbox" name="agr" class="agree" value="정보제공">정보제공</span>
+                <span><input type="checkbox" name="agr" class="agree" value="이벤트알림">이벤트알림</span>
+                <span><input type="checkbox" name="agr" class="agree" value="보험가입">보험가입</span>
+            </div>
+        </div>
+        <button type="button" id="pass">다음진행</button>
+    </form>
+    <!--
+        모두 동의 체크시 전체 체크 및 해제
+        체크 목록 중 하나라도 체크 해제 되면 모두동의 체크 해제
+
+        다음 진행 버튼 클릭시 모두 체크 안되어 있으면 모두 체크하세요 라고 멘트 띄우기
+    -->
+</body>
+</html>
