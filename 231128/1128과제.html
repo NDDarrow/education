@@ -4,9 +4,141 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        #imgWrap{
+            width: 1000px;
+            height: 100vh;
+            margin: 0 auto;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            
+        }
+        #img1{
+            width: 300px;
+            background: white;
+            position: absolute;
+            display: flex;
+            opacity: 0;
+            animation: pic1 3s linear ;
+            z-index: 10;
+        }
+        @keyframes pic1{
+            0%{opacity: 1;}
+            10%{opacity: 0.9;}
+            20%{opacity: 0.8;}
+            30%{opacity: 0.7;}
+            40%{opacity: 0.6;}
+            50%{opacity: 0.5;}
+            60%{opacity: 0.4;}
+            70%{opacity: 0.3;}
+            80%{opacity: 0.2;}
+            90%{opacity: 0.1;}
+            100%{opacity: 0;}
+        }
+        #img2{
+            width: 300px;
+            position: absolute;
+            background: white;
+            opacity: 0;
+            z-index: 10;
+            animation: pic2 6s linear 2.5s alternate;
+        }
+        @keyframes pic2{
+            0%{opacity: 0;}
+            5%{opacity: 0.1;}
+            10%{opacity: 0.2;}
+            15%{opacity: 0.3;}
+            20%{opacity: 0.4;}
+            25%{opacity: 0.5;}
+            30%{opacity: 0.6;}
+            35%{opacity: 0.7;}
+            40%{opacity: 0.8;}
+            45%{opacity: 0.9;}
+            50%{opacity: 1;}
+            55%{opacity: 0.9;}
+            60%{opacity: 0.8;}
+            65%{opacity: 0.7;}
+            70%{opacity: 0.6;}
+            75%{opacity: 0.5;}
+            80%{opacity: 0.4;}
+            85%{opacity: 0.3;}
+            90%{opacity: 0.2;}
+            95%{opacity: 0.1;}
+            100%{opacity: 0;}
+        }
+        #img3{
+            width: 300px;
+            position: absolute;
+            background: white;
+            opacity: 0;
+            z-index: 10;
+            animation: pic3 6s linear 8s;
+        }
+        @keyframes pic3{
+            0%{opacity: 0;}
+            5%{opacity: 0.1;}
+            10%{opacity: 0.2;}
+            15%{opacity: 0.3;}
+            20%{opacity: 0.4;}
+            25%{opacity: 0.5;}
+            30%{opacity: 0.6;}
+            35%{opacity: 0.7;}
+            40%{opacity: 0.8;}
+            45%{opacity: 0.9;}
+            50%{opacity: 1;}
+            55%{opacity: 0.9;}
+            60%{opacity: 0.8;}
+            65%{opacity: 0.7;}
+            70%{opacity: 0.6;}
+            75%{opacity: 0.5;}
+            80%{opacity: 0.4;}
+            85%{opacity: 0.3;}
+            90%{opacity: 0.2;}
+            95%{opacity: 0.1;}
+            100%{opacity: 0;}
+        }
+        #load{
+            width: 300px;
+            height: 300px;
+            background: black;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 30px;
+            z-index: 0;
+            animation: load1 17s linear;
+        }
+        @keyframes load1{
+            0%{opacity: 0;}
+            75%{opacity: 0;}
+            77.5%{opacity: 0.1;}
+            80%{opacity: 0.2;}
+            82.5%{opacity: 0.3;}
+            85%{opacity: 0.4;}
+            87.5%{opacity: 0.5;}
+            90%{opacity: 0.6;}
+            92.5%{opacity: 0.7;}
+            95%{opacity: 0.8;}
+            97.5%{opacity: 0.9;}
+            100%{opacity: 1;}
+        }
+    </style>
 </head>
 <body>
-    
+    <div id="imgWrap">
+        <div id="img1"><img src="./static/images/사진1.jpg"></div>
+        <div id="img2"><img src="./static/images/사진2.jpg"></div>
+        <div id="img3"><img src="./static/images/사진3.jpg"></div>
+        <div id="load"><span>로딩 완료</span></div>
+    </div>
 </body>
 </html>
 <!--과제 나만의 로딩 애니메이션을 만들어 보세요-->
