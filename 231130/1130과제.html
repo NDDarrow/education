@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #container{
+            width: 1000px;
+            height: 500px;
+            gap: 25px;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: repeat(4, 1fr);
+            grid-template-areas: 
+            "area1 area2 area3 area4"
+            "area1 area6 area5 area5"
+            "area1 area7 area5 area5"
+            "area1 area8 area8 area8"
+            ;
+        }
+        .item:nth-child(1){grid-area: area1;}
+        .item:nth-child(2){grid-area: area2;}
+        .item:nth-child(3){grid-area: area3;}
+        .item:nth-child(4){grid-area: area4;}
+        .item:nth-child(5){grid-area: area5;}
+        .item:nth-child(6){grid-area: area6;}
+        .item:nth-child(7){grid-area: area7;}
+        .item:nth-child(8){grid-area: area8;}
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div class="item" style="background: red;">1</div>
+        <div class="item" style="background: orange;">2</div>
+        <div class="item" style="background: yellow;">3</div>
+        <div class="item" style="background: green;">4</div>
+        <div class="item" style="background: blue;">5</div>
+        <div class="item" style="background: darkblue;">6</div>
+        <div class="item" style="background: purple;">7</div>
+        <div class="item" style="background: black; color: white;">8</div>
+    </div>
+</body>
+</html>

@@ -3,6 +3,7 @@
     margin:0;
     box-sizing: border-box;
 }
+html{ font-size: 10px;}
 ul{ list-style-type: none;}
 img{ width:100%; }
 
@@ -37,3 +38,102 @@ img{ width:100%; }
     padding: 50px 0;
     background: pink;
 }
+.content{
+    width: 100%;
+    padding: 0 10%;
+}
+
+.item{
+    margin-top: 20px;
+}
+#footer{
+    width: 100%;
+    background: dodgerblue;
+    padding: 50px;
+    position: relative;
+}
+.addr, .tel{
+    height: 2rem;
+    background: antiquewhite;
+    width: 60%;
+    position: relative;
+    left: 40%;
+}
+#footer .logo{
+    height: 4rem;
+    width: 4rem;
+    position: absolute;
+    background: black;
+    top: 50px;
+}
+
+/* 태블릿 용 */
+@media screen and (min-width:768px){
+    html{font-size: 15px;}
+    #header{ font-size: 20px;}
+    .content{
+        display: flex;
+        flex-wrap: wrap;
+        padding: 0 ;
+        justify-content: space-evenly;
+        gap: 20px;
+    }
+    .item{
+        margin: 0;
+        width: 45%;
+    }
+}
+/* pc용*/
+@media screen and (min-width:1024px){
+    .mobile_menu , .mobile_search{
+        display: none;
+    }
+    .pc_search , #nav{
+        display: block;
+    }
+    .pc_search input{
+        height: 30px;
+        padding-left: 8px;
+        font-size: 1.5em;
+        width: 8em;
+    }
+    #nav ul{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .menu{
+        width: 70px;
+        height: 25px;
+    }
+    .content{
+        gap: 25px;
+    }
+    #footer{
+        display: flex;
+    }
+    .addr , .tel{
+        width: 35%;
+        left: 0;
+    }
+    #footer .logo{
+        width: 8rem; height: 8rem;
+        position: relative;
+        top: 2rem;
+        right: 70%;
+        
+    }
+    .item{
+        width: 30%;
+    }
+    #wrap{
+        max-width: 1400px;
+    }
+}
+/*
+    이지미 배치- 한줄에 3장 이미지사이 간격은 25px
+    footer 
+    - addr, tel 을 한줄에 배치 10px footer의 왼쪽에 배치
+    - logo는 addr, tell밑에 배치, 이전 크기대비 2배 사이즈업
+*/
+
