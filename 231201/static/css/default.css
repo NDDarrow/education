@@ -27,4 +27,12 @@ a {
     color: inherit ;
 }
 span,b,i,strong{display: inline-block;}
-table{border-collapse: collapse;}
+table{
+    border-collapse: collapse;
+    text-align: center;
+}
+input[type=text], input[type=password], input[type=email],input[type=number]{
+    padding: 5px 10px;
+    outline: none;
+    border: 0;
+}
