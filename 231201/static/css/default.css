@@ -22,3 +22,9 @@ body{
     font-size: var(--font-size);
     color: var(--font-color);
 }
+a {
+    text-decoration: none;
+    color: inherit ;
+}
+span,b,i,strong{display: inline-block;}
+table{border-collapse: collapse;}
