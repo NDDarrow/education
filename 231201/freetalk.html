@@ -1,30 +1,51 @@
+
+<!-- freetalk.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
-    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <!--부트 스트랩-->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+
+<!-- jquery-->
+<script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+
+<link rel="icon" href="./static/images/KR-logo.ico">
+<link rel="stylesheet" href="./static/css/default.css">
+<link rel="stylesheet" href="./static/css/freetalk.css">
+<script src="./static/javascript/freetalk.js"></script>
+
+
 </head>
 <body>
+    
     <div id="wrap">
         <div id="top">
             <div class="topMenu">
-                <span>로그인</span>
-                <span>회원가입</span>
-                <span>문의</span>
+                <span>
+                    <a href="./signin.html">로그인</a>
+                </span>
+                <span>
+                    <a href="./signup.html">회원가입</a>
+                </span>
+                <span>
+                    <a href="">문의</a>
+                </span>
             </div>
         </div>
         <div id="header">
             <div id="nav">
-                <div class="logo"></div>
+                <div class="logo" onclick="javascript:location.href='./index.html';"></div>
                 <div class="menu">
                     <ul class="menuList">
                         <li class="menuItem">
                             FreeDomLife
                             <ul class="subMenu">
-                                <li class="subItem">나혼자산다</li>
+                                <li class="subItem">
+                                    <a href="./freetalk.html">나혼자산다</a>
+                                </li>
                                 <li class="subItem">혼밥</li>
                                 <li class="subItem">혼술</li>
                             </ul>
@@ -37,10 +58,12 @@
                             </ul>
                         </li>
                         <li class="menuItem">
-                            Mylife
+                            MyLife
                             <ul class="subMenu">
                                 <li class="subItem">슬기로운사회생활</li>
-                                <li class="subItem">행복한연애생활</li>
+                                <li class="subItem">
+                                    행복한연애생활
+                                </li>
                                 <li class="subItem">홀로서기</li>
                             </ul>
                         </li>
@@ -48,7 +71,7 @@
                         <li class="menuItem">
                             MovieIs
                             <ul class="subMenu">
-                                <li class="subItem">액션</li>
+                                <li class="subItem">액션/SF</li>
                                 <li class="subItem">공포/스릴러</li>
                                 <li class="subItem">코미디/드라마</li>
                                 <li class="subItem">혼자본영화</li>
@@ -58,6 +81,74 @@
                     </ul>
                 </div>
             </div>
+        </div>
+
+    <div id="boxWrap">
+        <div class="boardSearch">
+            <input type="text" name="search" id="search">
+            <div class="searchBt"><i class="bi bi-search"></i></div>
+        </div>
+        
+        <div class="boardBox">
+            <table class="board">
+                <tr>
+                    <th>번호</th>
+                    <th>제목</th>
+                    <th>작성자</th>
+                    <th>작성일</th>
+                </tr>
+                <tbody class="detail">
+                    <tr>
+                        <td>8</td>
+                        <td>지나친것은 모자람보다 못하다</td>
+                        <td>???</td>
+                        <td>???</td>
+                    </tr>
+                    <tr>
+                        <td>7</td>
+                        <td>나의 나치에 유대인은 없다</td>
+                        <td>히틀러</td>
+                        <td>미상</td>
+                    </tr>
+                    <tr>
+                        <td>6</td>
+                        <td>그래도 지구는 돈다</td>
+                        <td>갈릴레오 갈릴레이</td>
+                        <td>1762.12.10</td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>화살 한발로 세상을 평정하겠어</td>
+                        <td>애쉬</td>
+                        <td>1789.2.25</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>봄이온다</td>
+                        <td>나</td>
+                        <td>2023.12.04</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>보이루</td>
+                        <td>보겸</td>
+                        <td>2015.5.3</td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>게시판 첫 글</td>
+                        <td>미상</td>
+                        <td>2000.1.01</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+
+
+        <div id="footer">
+            <h4>프리덤클럽 Corp.</h4>
         </div>
     </div>
 </body>

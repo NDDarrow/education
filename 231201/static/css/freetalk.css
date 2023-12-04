@@ -1,0 +1,32 @@
+#boxWrap{
+    width: 1200px;
+    margin: 0 auto;
+}
+.boardSearch{
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.boardBox{
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+}
+.detail{
+    width: 100%;
+}
+.detail td:nth-child(1){
+    width: 10%;
+}
+.detail td:nth-child(2){
+    width: 50%;
+}
+.detail td:nth-child(3){
+    width: 20%;
+}
+.detail td:nth-child(4){
+    width: 20%;
+}

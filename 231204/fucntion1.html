@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<script>
+// //function - 함수(독립적으로 기능을 실행), 메서드(종속 되어있는 기능을 가진 함수)
+// // b 밑에 c라는 메서드가 존재한다면
+// // b를 프로그램 실행과 함께 같이 실행해주면 c 메서드도 함께 램에 로드(적재)된다.
+// // a라는 함수는 자신이 실행 될때만 로드 된다.
+// // c라는 메서드를 실행 하려면 b가 필요하다. b를 미리 로드 시켜주면 a 함수보다 더욱 빠르게 실행이 가능하다. 다만 b가 반드시 존재해야지만 실행 할 수 있다.
+
+// //function 함수이름(){}
+// //함수 - 재사용, 수정, 모듈화
+// //함수를 사용하는 이유는 개발자 편의를 위해
+// //자바스크립트 작성시 분할(함수로 분리) 해서 작업하는 습관들이기.
+
+// //함수의 4가지 형태
+
+// //function 함수이름(입력변수(매개변수또는 인자)){함수내용; 반환값(return);}
+// //매개변수 - 함수가 실행되기 위한 반드시 필요한값을 저장하는 변수 - 입력값
+// //반환값(return) - 함수가 실행이 되서 나온 결과값
+// //함수를 실행하려면 함수이름(); 라는 코드를 작성해야 함수가 실행 된다.
+// //함수를 만드려면 먼저 왜, 무엇때문에 함수를 만드는지 알아야 한다.
+// //왜 함수를 구현해야 하는가?
+// a(10,20);
+
+
+// //함수의 형태 1. 매개변수가 있는 함수, 반환이 없는 함수
+// function a(aa, b, c){//두개 정수 합을 구하는 함수
+//     console.log(aa + b)    
+// }
+
+// //함수의 형태 2. 매개변수, 반환이 없는 함수
+// b();
+// function b(){
+//     var num = 10;
+//     console.log(num * 2);
+// }
+// //함수의형태 3. 매개변수 없고, 반환은 있는 함수
+// function c(){
+//     var num = 10, num1 = 20;
+//     var result = num + num1
+//     return result; // return은 함수가 실행된 곳으로 데이터를 보내는 방법
+// }
+
+// var res = c();
+
+// //함수의 형태 4. 매개변수와 반환이 있는 함수
+// function indexOf(data){
+    
+//     return 11;
+// }
+
+
+//함수가 가진데이터를 함수 밖으로 보내는 방법
+//return을 활용하여 반환값 처리 하기
+//전역변수를 사용
+
+let result = 0; //전역변수
+let answer = "";
+function plus(num1 , num2 , num3){//함수 정의(실행 x)
+    var result = num1 + num2 + num3;
+}
+function print(){
+    document.getElementById("res").innerHTML = result;
+}
+
+function avg(){
+    var k = parseInt(document.getElementById("num1").value);
+    var l = parseInt(document.getElementById("num2").value);
+    var m = parseInt(document.getElementById("num3").value);
+    return result = parseInt((k + l + m)/3);
+
+    total(k, l ,m);//토탈함수에 k,l,m값을 전달
+}
+function total(a, b, c){
+    return (a+b+c);
+}
+
+function dan(end){
+    var num = parseInt(document.getElementById("gugu").value);
+    for(var i = 1; i <= end; i++){
+    answer += num + "*" + i + " = " + num*i + "<br>"
+    }
+    document.getElementById("gugudan").innerHTML = answer;
+    
+}
+
+</script>
+</head>
+<body>
+    
+    <button onclick="plus(10,20,30)">함수 실행</button>
+    <button onclick="print()">결과 출력</button>
+    <div id="res"></div>
+
+    <input type="text" id="num1">
+    <input type="text" id="num2">
+    <input type="text" id="num3"><br>
+
+    <button onclick="avg()">성적 평균 계산</button>
+    <br><br>
+    
+    <input type="text" id="gugu">
+    <button onclick="dan(7)">구구단출력</button>
+    <div id="gugudan"></div>
+
+</body>
+</html>
