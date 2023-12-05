@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <script>
+        $(function(){
+            $(".house").on("dblclick", update);
+        });
+
+        //a 라는 함수안의 변수의 값을 b라는 함수에서 사용하려면
+        //b 함수의 매개변수를 통해 전달
+        //전역변수를 통해 사용가능하게 한다.
+
+        //input type이 날짜 또는 시간형식일 경우에
+        //value 값은 형태가 2023-12-01 11:09 형식이다.
+
+        function update(){
+                var td = $(this)
+                var td_text = td.text();
+                var type="text";
+                
+                var bt = "<button class='modify'>수정</button>";
+                var htmlTag = "";
+
+                if( td.hasClass("payment")){
+                    let pay =["체크카드","현금","신용카드","카드론"]
+                    
+                    htmlTag = `<select id = 'pay'>`;
+                    for( var card of pay){
+                        htmlTag += `<option value = '${card}' ${td_text === card ? 'selected' :''}>${card}</option>`;
+                    }
+                    
+                    htmlTag += `</select>`
+
+                }else{
+                
+                if(td.hasClass("date")){
+                    type="date";
+                    td_text = changeDate(td_text);
+                }
+                // td.removeClass("house"); // removeClass (삭제할 클래스명)
+                // td.addClass("change");; // addClass(추가 할 클래스명)
+
+                htmlTag =`<input type='${type}' value='${td_text}'>`;
+                }
+                td.html( htmlTag + bt)
+                
+                $(".modify").on("click" , function(){
+                    save( td );
+                });
+
+                
+        };
+//내용이 복잡해지는 경우 분할하여 코드가 한곳에 집중 되는 것을 방지한다.
+//코드가 한곳에 집중되어 작성되면 개발자 입장에서 코드를 파악하기 힘들다.
+//코드를 정리하여 작성하는 것 개발자가 가져야할 습관중 하나이다.
+        function changeDate(date){
+            let month = date.split(".")[0]
+            let day = date.split(".")[1]
+            
+            if(month.length == 1) month = "0" + month;
+            if(day.length == 1) day = "0" + day;
+            
+            return "2023-" + month + "-" + day;
+        
+        }
+
+        function save( t ){
+            var select = t.children("select").val();
+            var text = t.children("input").val();
+            if(t.hasClass("date")){
+                text = Number(text.split("-")[1]) + "." + Number(text.split("-")[2]); 
+            }
+            
+
+            if(t.hasClass("payment")){
+                t.text(select)
+            }else{
+            t.text(text);
+            }
+        }
+
+
+    </script>
+</head>
+<body>
+    
+    <div id="wrap">
+        <table>
+            <thead>
+                <tr>
+                    <th>일</th>
+                    <th>내역</th>
+                    <th>지출</th>
+                    <th>결제방법</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="house date">12.3</td>
+                    <td class="house detail">담배</td>
+                    <td class="house expense">4500</td>
+                    <td class="house payment">체크카드</td>
+                </tr>
+                <tr>
+                    <td class="house date">12.2</td>
+                    <td class="house detail">백반</td>
+                    <td class="house expense">8000</td>
+                    <td class="house payment">체크카드</td>
+                </tr>
+                <tr>
+                    <td class="house date">12.1</td>
+                    <td class="house detail">붕어빵</td>
+                    <td class="house expense">2000</td>
+                    <td class="house payment">현금</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+</body>
+</html>

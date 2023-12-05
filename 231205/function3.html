@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <script>
+
+        let oldNum = 0;//연산자 클릭 이전의 숫자 저장 변수
+        let op = ''; //클릭한 연산자 저장 변수
+        let nowNum = 0 // 최근에 클릭한 숫자 저장 변수
+
+
+        $(function(){
+            $(".item").on("click" , input);
+        });
+        function input(){
+            var div = $(this); //클릭한 div 태그
+            var data = div.data("value");
+            
+            data = (data === "=") ? calc() : operand(data , isNaN(data));
+
+            $("#res").append( data );
+        };
+
+        function calc(){
+            $("#res").empty(); //태그 내부를 비워주는 함수
+            switch(op){
+                case "+":
+                    return nowNum = oldNum + nowNum;
+                case "-":
+                    return nowNum = oldNum - nowNum;
+                case "*":
+                    return nowNum = oldNum * nowNum;
+                case "/":
+                    return nowNum = oldNum / nowNum;
+            }
+            
+        }
+
+
+        function operand( d , isN){
+            if( isN ){
+                op = d;
+                oldNum = nowNum;
+                nowNum = 0;
+            }else{
+                nowNum = nowNum * 10 + Number(d);
+            }
+            return d;
+        }
+        
+
+
+    </script>
+
+
+    <style>
+        #wrap{
+            display: grid;
+            width: 500px;
+            grid-template-columns: repeat(4 ,1fr);
+            grid-auto-rows: 50px;
+            gap: 10px;
+        }
+
+        .item{
+            background: lightgray;
+            box-shadow: inset 0 0 1px 4px gray;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .item:nth-child(13){
+            grid-column: 1/3;
+        }
+        #res{
+            margin-top: 30px;
+            font-size: 30px;
+            width: 500px;
+            border-bottom: 1px solid black;
+            padding-left: 10px;
+            padding-bottom: 10px;
+        }
+    </style>
+
+</head>
+
+
+<body>
+    
+
+    <!-- 계산기
+    dataset -> data-이름 = '데이터(값)'
+    -->
+    <div id="wrap">
+        <div class="item" data-value="7">7</div>
+        <div class="item" data-value="8">8</div>
+        <div class="item" data-value="9">9</div>
+        <div class="item" data-value="+">+</div>
+        <div class="item" data-value="4">4</div>
+        <div class="item" data-value="5">5</div>
+        <div class="item" data-value="6">6</div>
+        <div class="item" data-value="-">-</div>
+        <div class="item" data-value="1">1</div>
+        <div class="item" data-value="2">2</div>
+        <div class="item" data-value="3">3</div>
+        <div class="item" data-value="*">*</div>
+        <div class="item" data-value="0">0</div>
+        <div class="item" data-value="=">=</div>
+        <div class="item" data-value="/">/</div>
+    </div>
+    <div id="res"></div>
+
+
+</body>
+</html>
