@@ -5,30 +5,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
-<script>
-    function com(){
-        document.getElementById("com").innerHTML += `<img src="./static/imgaes/paper.png" alt="보">`
-    };
-    
-</script>
-
-
-
-<style>
-    *{
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-    }
-    #wrap{
-        width: 1000px;
-        margin: 0 auto;
-    }
-</style>
-
+    <script src="./static/js/game.js"></script>
+    <link rel="stylesheet" href="./static/css/game.css">
 </head>
 <body>
     
+    <div id="screen">
+        <div id="comView">
+            <div class="com">
+                <img id="comImg">
+            </div>
+        </div>
+        <div id="userView">
+            <div class="user scissors"><img src="./static/images/scissors.png" alt="가위"></div>
+            <div class="user rock"><img src="./static/images/rock.png" alt="바위"></div>
+            <div class="user paper"><img src="./static/images/paper.png" alt="보"></div>
+        </div>
+        <div id="result">
+            <div class="bt"><button id="start">시작</button></div>
+            <div class="res"></div>
+    </div>
+
     <!--
         과제
         가위 바위 보.
@@ -41,12 +38,5 @@
 
         setInterval
     -->
-    
-    <div id="wrap">
-        <div id="com">com</div>
-        <div id="result">결</div>
-        <div id="user"><img src="./static/images/paper.png" alt="보" id="paper"><img src="./static/images/rock.png" alt="바위" id="rock"><img src="./static/images/scissors.png" alt="가위" id="scis"></div>
-    </div>
-
 </body>
 </html>
