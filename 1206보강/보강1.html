@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //변수 데이터 종류, 변수 타입, 변수 종류
+
+        //문제 1. 10과 25의 합을 출력하세요
+        //문제 2 민수키 170 재홍키 173 둘의 키차이는 얼마인가
+
+        // var num1 = 10;
+        // var num2 = 25;
+        // document.write(num1 + " + " + num2+ " = " + (num1 + num2))
+
+        // var min = 170;
+        // var jae = 173;
+        // document.write("<br>재홍 - 민수 = "  + (jae - min) + "<br><br>")
+
+
+        // var count = 8500/1250
+        // if( count == 7){
+        //     console.log("맞다")
+        // }else console.log("틀림")
+
+
+        // 엘레베이터 3대가 있다.
+        // 각각 1호기, 2호기, 3호기
+        // 1호기는 현재 17층에 있고, 2호기는 13층, 3호기는 21층에 있다.
+        // 내가 1층에서 엘베 버튼을 눌렀다면 누가 먼저 내려오는가?
+
+        // var elve1 = 17; var elve2 = 13; var elve3 = 21;
+        // if(elve1 != 1 && elve2 != 1 && elve3 != 1){
+        //     if( elve1 <= elve2 && elve1 <= elve3){
+        //         document.write("1호기가 내려옵니다")
+        //     }else if( elve2 <= elve1 && elve2 <= elve3){
+        //         document.write("2호기가 내려옵니다")
+        //     }else if( elve3 <= elve1 && elve3 <= elve2){
+        //         document.write("3호기가 내려옵니다.")
+        //     }
+        // }else{
+        //     document.write("탑승하십쇼")
+        // }
+
+        // var min = 0;
+        // var hour = 4;
+        // var mask = (min*100) + (hour*60*100)
+        // var myTurn = parseInt(mask/10000)
+        // if(myTurn < 10){
+        //     document.write("10번 안쪽으로 받습니다.<br>")
+        // }else document.write("10번 넘어서 받습니다.<br>")
+        
+        // document.write(myTurn)
+
+        //세율표
+        // 1200 이하 6%
+        // 1200초과 ~ 4600이하 15
+        // 4600 ~ 8800 24
+        // 8800 ~ 15000 35%
+        // 15000 ~ 30000 38%
+        // 30000 ~ 50000 40%
+        // 5억 초과 42%
+        var tax = 0;
+        var income = prompt("연봉 입력(만원 단위)")
+        
+        if(income <= 1200){
+            tax = 0.06
+        }else if(income <= 4600){
+            tax = 0.15
+        }else if(income <= 8800){
+            tax = 0.24
+        }else if(income <= 15000){
+            tax = 0.35
+        }else if(income <= 30000){
+            tax = 0.38
+        }else if(income <= 50000){
+            tax = 0.4
+        }else{
+            tax = 0.42
+        }
+        var bill = income*tax
+        document.write("나의 세율은 " + tax + "<br>나의 세금은 " + bill)
+
+    </script>
+</head>
+<body>
+    <!--
+        변수 - 
+    -->
+</body>
+</html>
