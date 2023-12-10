@@ -1,0 +1,35 @@
+*{
+    margin: 0; padding: 0;
+    box-sizing: border-box;
+}
+#wrap{
+    width: 1500px;
+    height: 1500px;
+    margin: auto auto;
+}
+#main_table{
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+.table_tr{
+    height: 200px;
+}
+.table_td{
+    width: 200px;
+    border: 1px solid black;
+}
+.table_wrap{
+    width: 100%;
+    height: 100%;
+}
+.color{
+    width: 100%;
+    height: 100%;
+    background: yellow;
+    text-align: center;
+}
+.country{
+    width: 100%;
+    height: 133.3px;
+    text-align: center;
+}

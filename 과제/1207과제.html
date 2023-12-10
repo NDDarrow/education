@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    <script src="./static/js/game.js"></script>
+    <link rel="stylesheet" href="./static/css/game.css">
+    
+</head>
+<body>
+    <!--
+        맵만들어오기
+        다음주 화요일까지
+        가로 7칸, 세로 7칸 의 정사각형
+        부루마블 칸 만들어오기
+        대한민국과 일본 도시 이름으로 칸을 채워오세요
+        각면마다 서로 다른 색을 채워오세요
+    -->
+    <div id="wrap">
+        <div id="game_wrap">
+            <table id="main_table">
+                <tr class="table_tr">
+                    <td class="table_td"><img src="./static/images/세계여행.png" alt="세계여행"></td>
+                    <td class="table_td">
+                        <div class="color">색깔</div>
+                        <div class="country">국가</div>
+                    </td>
+                    <td class="table_td"></td>
+                    <td class="table_td"></td>
+                    <td class="table_td"></td>
+                    <td class="table_td"></td>
+                    <td class="table_td"><img src="./static/images/적십자.jpg" alt="적십자" width="100%" height="100%"></td>
+                </tr>
+                <tr class="table_tr">
+                    <td class="table_td"></td>
+                    <td class="table_td" rowspan="5" colspan="5"><img src="./static/images/부루마블.jpg" alt="메인이미지"></td>
+                    <td class="table_td"></td>
+                </tr>
+                <tr class="table_tr">
+                    <td class="table_td"></td>
+                    <td class="table_td"></td>
+                    
+                </tr>
+                <tr class="table_tr">
+                    <td class="table_td"></td>
+                    <td class="table_td"></td>
+                    
+                </tr>
+                <tr class="table_tr">
+                    <td class="table_td"></td>
+                    <td class="table_td"></td>
+                    
+                </tr>
+                <tr class="table_tr">
+                    <td class="table_td"></td>
+                    <td class="table_td"></td>
+                    
+                </tr>
+                <tr class="table_tr">
+                    <td class="table_td"><img src="./static/images/출발.png" alt="출발"></td>
+                    <td class="table_td">
+                        <div class="color">색깔</div>
+                        <div class="country">국가</div>
+                    </td>
+                    <td class="table_td"></td>
+                    <td class="table_td"></td>
+                    <td class="table_td"></td>
+                    <td class="table_td"></td>
+                    <td class="table_td"><img src="./static/images/무인도.jpg" alt="무인도"></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</body>
+</html>
