@@ -16,20 +16,83 @@
 }
 .table_td{
     width: 200px;
+    height: 100%;
     border: 1px solid black;
 }
 .table_wrap{
     width: 100%;
     height: 100%;
 }
-.color{
+.color1{
     width: 100%;
-    height: 100%;
+    height: 50px;
     background: yellow;
-    text-align: center;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
 }
-.country{
+.country1{
     width: 100%;
-    height: 133.3px;
+    height: 155px;
     text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.color2{
+    width: 206px;
+    height: 50px;
+    background: green;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+.country2{
+    width: 100%;
+    height: 155px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.color3{
+    width: 100%;
+    height: 50px;
+    background: blue;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+.country3{
+    width: 100%;
+    height: 161px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.color4{
+    width: 206px;
+    height: 50px;
+    background: red;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+.country4{
+    width: 100%;
+    height: 155px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.col2{
+    transform: rotate(180deg);
+}
+.col1{
+    transform: rotate(270deg);
+}
+.col3{
+    transform: rotate(90deg);
+}
+.font{
+    font-size: 30px;
+    font-weight: 800;
 }
