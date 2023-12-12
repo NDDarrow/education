@@ -1,36 +1,36 @@
 
 
-const zone_name= [
-    "복지기금","화성","성남","창원","제주","용인","수원","울산",
-    "인천공항","청주","광주","부천","대구","남양주","인천","포항",
-    "복지기금납부","천안","부산","전주","서울","안산","대전",
-    "무인도","안양","김해","평택","시흥","파주","의정부","김포","출발"
-];
+// const zone_name= [
+//     "복지기금","화성","성남","창원","제주","용인","수원","울산",
+//     "인천공항","청주","광주","부천","대구","남양주","인천","포항",
+//     "복지기금납부","천안","부산","전주","서울","안산","대전",
+//     "무인도","안양","김해","평택","시흥","파주","의정부","김포","출발"
+// ];
 
-const zone_color=["#FF2424","#53C14B","#FFBB00","#121212"]; // 각면의 색상
-const land_purchase = [
-    0 , 25 , 27 , 26 , 34 , 28 , 27 , 39 ,
-    0 , 16 , 42 , 20 , 45 , 19 , 48 , 27 ,
-    0 , 21 , 52 , 20 , 80 , 22 , 120 , 0 ,
-    12 , 10 , 15 , 12 , 9 , 9 , 7 , 0
+// const zone_color=["#FF2424","#53C14B","#FFBB00","#121212"]; // 각면의 색상
+// const land_purchase = [
+//     0 , 25 , 27 , 26 , 34 , 28 , 27 , 39 ,
+//     0 , 16 , 42 , 20 , 45 , 19 , 48 , 27 ,
+//     0 , 21 , 52 , 20 , 80 , 22 , 120 , 0 ,
+//     12 , 10 , 15 , 12 , 9 , 9 , 7 , 0
 
-];
+// ];
 
-const bg_image = [
-    "출발.png","무인도.jpg","적십자.jpg","세계여행.png","부루마블.jpg"
-];
+// const bg_image = [
+//     "출발.png","무인도.jpg","적십자.jpg","세계여행.png","부루마블.jpg"
+// ];
 
 //각 구역의 객체 생성자 함수
 // 구역 이름, 토지매입가격, 소유자, 색상, 기능(모서리부분), 이미지
 
-function zone_Object( name, purchase, owner, color, func, image){
-    this.name = name;
-    this.purchase = purchase;
-    this.owner = owner;
-    this.color = color;
-    this.func = func;
-    this.back = image;
-}
+// function zone_Object( name, purchase, owner, color, func, image){
+//     this.name = name;
+//     this.purchase = purchase;
+//     this.owner = owner;
+//     this.color = color;
+//     this.func = func;
+//     this.back = image;
+// }
 
 //플레이어 생성자 함수
 function player(num,color){
@@ -48,28 +48,28 @@ let island_ = new Array(); //무인도에 도착한 플레이어
 let zone = new Array(); //각 구역의 객체 저장 배열
 let player_list = new Array();// 게임 참가자 
 
-function zone_create(){
-    for( var i=0; i < zone_name.length; i++){
-        var color = zone_color[0];
-        if( i >= 0 & i <= 7)
-            color = zone_color[2];
-        if(( i >= 8 & i <= 23) & i%2 == 0)
-            color = zone_color[3];
-        if((i >= 8 & i <= 23) & i%2 ==1)
-            color = zone_color[1];
+// function zone_create(){
+//     for( var i=0; i < zone_name.length; i++){
+//         var color = zone_color[0];
+//         if( i >= 0 & i <= 7)
+//             color = zone_color[2];
+//         if(( i >= 8 & i <= 23) & i%2 == 0)
+//             color = zone_color[3];
+//         if((i >= 8 & i <= 23) & i%2 ==1)
+//             color = zone_color[1];
 
-        var image = "";
-        if( i == 0) image = bg_image[2];
-        if( i == 8) image = bg_image[3];
-        if( i == 23) image = bg_image[1];
-        if( i == 31) image = bg_image[0];
+//         var image = "";
+//         if( i == 0) image = bg_image[2];
+//         if( i == 8) image = bg_image[3];
+//         if( i == 23) image = bg_image[1];
+//         if( i == 31) image = bg_image[0];
 
-        zone.push( new zone_Object(
-            zone_name[i] , land_purchase[i], "", color , "", image
-        ));
-    }
-};
-console.log(zone)
+//         zone.push( new zone_Object(
+//             zone_name[i] , land_purchase[i], "", color , "", image
+//         ));
+//     }
+// };
+    //console.log(zone)
 //구역객채들을 zone클래스 div에 적용하기
 function zone_draw(){
     $.each( zone, function( idx , obj){
@@ -112,8 +112,13 @@ function change_pcl(){
 
 
 $(function(){
-    zone_create();
+    //zone_create();
     zone_draw();
+
+    $.getJSON("./json/city.json", function(data){
+        zone = data
+        zone_draw(zone)
+    });
 
     $("#enroll").on("click", game_init );
     $("#player_number").on("change", function(){
@@ -123,6 +128,8 @@ $(function(){
 
     $("input[type=color]").on("change", change_pcl );
 });
+
+
 
 // 과제 - 각 구역의 객체를 json 으로 작성해 오세요.
 // city.json으로 작성 하세요.
