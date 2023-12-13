@@ -215,6 +215,7 @@ $(function(){
         zone = data;
         zone_draw()
         
+        func_link()
     });
 
     // zone_draw();
@@ -228,12 +229,13 @@ $(function(){
 });
 // 16 -복지기금 , 24-공항 , 28-기금납부 , 8-무인도, 0-출발지
 function func_link(){
-    zone[0].func = welfare;
-    zone[8].func = airport;
-    zone[16].func = fundpayment;
-    zone[23].func = island;
-    zone[31].func = complete;
+    zone[0].func = `welfare(gamer)`;
+    zone[8].func = `airport(gamer)`;
+    zone[16].func = `fundpayment(gamer)`;
+    zone[23].func = `island(gamer)`;
+    zone[31].func = `complete(gamer)`;
 }
+
 
 function welfare(gamer){ //복지기금 수령
     alert(`복지기금 ${fund}만원을 받았습니다.`)
@@ -242,20 +244,21 @@ function welfare(gamer){ //복지기금 수령
     $("#pm"+gamer.num).text( gamer.money+"만원");
 }
 function airport(gamer){ // 원하는 위치로 이동
-    gamer.drift_turn = 3;
+    
 }
-function fundpayment(){ //복지기금 납부
+function fundpayment(gamer){ //복지기금 납부
     alert("복지기금으로 20만원을 납부했습니다.")
     gamer.money -= 20;
     fund += 20;
     $("#pm"+gamer.num).text( gamer.money+"만원");
 }
-function island(){ //3턴동안 못움직임
+function island(gamer){ //3턴동안 못움직임
+    gamer.drift_turn = 3;
+}
+function complete(gamer){ //출발지에 도착하거나 통과하면 20만원 보너스
 
 }
-function complete(){ //출발지에 도착하거나 통과하면 20만원 보너스
 
-}
 
 
 // 과제 - 각 구역의 객체를 json 으로 작성해 오세요.

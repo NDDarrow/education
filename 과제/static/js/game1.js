@@ -36,7 +36,7 @@ function meeple_move(){ //주사위 값에 따라 말을 움직이기
     var gamer = player_list[turn-1]
     var dice_sum = dice1[1] + dice2[1] + 2;
     var old_location = gamer.location; //현재위치 (이동전);
-
+    console.log(gamer.drift_turn)
     //플레이어 위치변경
     if( gamer.drift_turn != 0){
         gamer.drift_turn--;
@@ -63,10 +63,14 @@ function game_todo(location){
 // location의 값은 몇번째 zone클래스인지 알수도 있지만, zone배열의 구역객체의
 // 인덱스로도 사용가능
     var city = zone[location];
+    console.log(zone[location])
     var gamer = player_list[turn-1];
     if(city.purchase == 0){ //매입금이 = 0인 곳 무인도, 기금, 출발, 공항, 기금납부
         // 16 -복지기금 , 24-공항 , 28-기금납부 , 8-무인도, 0-출발지
-        city.func(gamer);
+        console.log(gamer)
+        console.log(city)
+        
+        eval(city.func);
     }else if( zone[location].owner == ''){
         if(confirm(`${city.name}의 매입가는 ${city.purchase}만원, \n살래?`)){
             city.owner = turn; //토지 소유자 변경
