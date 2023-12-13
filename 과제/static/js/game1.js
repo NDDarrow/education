@@ -38,29 +38,17 @@ function meeple_move(){ //주사위 값에 따라 말을 움직이기
     var old_location = gamer.location; //현재위치 (이동전);
 
     //플레이어 위치변경
-    if( gamer.location + dice_sum > 31){
+    if( gamer.drift_turn != 0){
+        gamer.drift_turn--;
+        alert(`${gamer.drift_turn}턴 뒤 탈출`)
+    }else if( gamer.location + dice_sum > 31){
         var diff = (gamer.location + dice_sum) - 32;
         gamer.location = diff;
+        moving(gamer)
     }else{
         gamer.location = gamer.location + dice_sum;
+        moving(gamer)
     }
-
-    //말 위치 변경, 이전 위치에서는 제거
-    var old_zone = find_location(old_location); //이동전 말위치 찾기
-    $(".zone").eq(old_zone).children(".m"+turn).remove();
-
-
-    var zone_location = find_location( gamer.location);
-    var tag=
-            `<div class='meeple m${gamer.num}' data-pn='${gamer.num}'
-            style='color:${gamer.color};'>
-            <i class="fa-solid fa-user"></i>
-            </div>`;
-    $(".zone").eq(zone_location).append(tag);
-    overlap(zone_location); //겹침 방지
-    
-    //이동한 위치에 땅에서 할일
-    game_todo(zone_location);
 
 
     // 턴넘기기
@@ -89,7 +77,7 @@ function game_todo(location){
             
             
         }
-    }else{//매입취소시 실행
+    }else{//매입된 땅에 접근시
         var owner = city.owner;
         var tollfee = city.purchase;//통행료
         gamer.money -= tollfee;
@@ -102,3 +90,22 @@ function game_todo(location){
 
 
 }
+
+function moving(gamer, old_location){
+    //말 위치 변경, 이전 위치에서는 제거
+    var old_zone = find_location(old_location); //이동전 말위치 찾기
+    $(".zone").eq(old_zone).children(".m"+turn).remove();
+
+
+    var zone_location = find_location( gamer.location);
+    var tag=
+            `<div class='meeple m${gamer.num}' data-pn='${gamer.num}'
+            style='color:${gamer.color};'>
+            <i class="fa-solid fa-user"></i>
+            </div>`;
+    $(".zone").eq(zone_location).append(tag);
+    overlap(zone_location); //겹침 방지
+    
+    //이동한 위치에 땅에서 할일
+    game_todo(zone_location);
+    };

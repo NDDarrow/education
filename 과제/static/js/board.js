@@ -242,7 +242,7 @@ function welfare(gamer){ //복지기금 수령
     $("#pm"+gamer.num).text( gamer.money+"만원");
 }
 function airport(gamer){ // 원하는 위치로 이동
-
+    gamer.drift_turn = 3;
 }
 function fundpayment(){ //복지기금 납부
     alert("복지기금으로 20만원을 납부했습니다.")
