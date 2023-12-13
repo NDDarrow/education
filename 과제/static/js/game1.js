@@ -44,10 +44,10 @@ function meeple_move(){ //주사위 값에 따라 말을 움직이기
     }else if( gamer.location + dice_sum > 31){
         var diff = (gamer.location + dice_sum) - 32;
         gamer.location = diff;
-        moving(gamer)
+        moving(gamer, old_location)
     }else{
         gamer.location = gamer.location + dice_sum;
-        moving(gamer)
+        moving(gamer, old_location)
     }
 
 
